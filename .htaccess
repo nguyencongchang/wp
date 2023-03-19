@@ -90,14 +90,7 @@ RewriteRule (.*) / [L,R=301]
 # END iThemes Security - Do not modify or remove this line
 
 # BEGIN WordPress
-# Les directives (lignes) entre « BEGIN WordPress » et « END WordPress » sont générées
-# dynamiquement, et doivent être modifiées uniquement via les filtres WordPress.
-# Toute modification des directives situées entre ces marqueurs sera surchargée.
-RewriteCond %{REQUEST_FILENAME} -s
-RewriteCond %{HTTP_USER_AGENT} !facebookexternalhit/[0-9]
-RewriteCond %{HTTP_USER_AGENT} !Twitterbot/[0-9]
-RewriteCond %{HTTP_USER_AGENT} !Googlebot/[0-9]
-RewriteRule wp-content/uploads/wp-import-export-lite(\/[A-Za-z0-9_@.\/&+-]+)+\.([A-Za-z0-9_@.\/&+-]+)$ [L]
+# Các nội dung nằm giữa "BEGIN WordPress" và "END WordPress" được tạo ra tự động, và chỉ nên được thay đổi thông qua các filter của WordPress. Mọi thay đổi tới thành phần này có thể sẽ bị mất và ghi đè.
 <IfModule mod_rewrite.c>
 RewriteEngine On
 RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
@@ -107,6 +100,5 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule . /index.php [L]
 </IfModule>
-
 
 # END WordPress

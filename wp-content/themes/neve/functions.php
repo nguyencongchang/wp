@@ -151,3 +151,45 @@ if ( neve_is_new_widget_editor() ) {
 }
 
 require_once get_template_directory() . '/header-footer-grid/loader.php';
+
+function create_custom_post_types() {
+    // Custom post type 1
+    register_post_type( 'custom_post_type_1',
+        array(
+            'labels' => array(
+                'name' => __( 'Dự Án' ),
+                'singular_name' => __( 'Dự Án' )
+            ),
+            'public' => true,
+            'has_archive' => true,
+        )
+    );
+
+    // Custom post type 2
+    register_post_type( 'custom_post_type_2',
+        array(
+            'labels' => array(
+                'name' => __( 'Sản Phẩm' ),
+                'singular_name' => __( 'Sản Phẩm' )
+            ),
+            'public' => true,
+            'has_archive' => true,
+        )
+    );
+
+    // Custom post type 3
+    register_post_type( 'custom_post_type_3',
+        array(
+            'labels' => array(
+                'name' => __( 'Dịch Vụ' ),
+                'singular_name' => __( 'Dịch Vụ' )
+            ),
+            'public' => true,
+            'has_archive' => true,
+        )
+    );
+
+    // Add more custom post types as needed
+}
+
+add_action( 'init', 'create_custom_post_types' );
