@@ -11,6 +11,8 @@ $container_class = apply_filters( 'neve_container_class_filter', 'container', 's
 get_header();
 
 ?>
+    <div class="banner">banner bg-img</div>
+
 	<div class="<?php echo esc_attr( $container_class ); ?> single-post-container">
 		<div class="row">
 			<?php do_action( 'neve_do_sidebar', 'single-post', 'left' ); ?>
@@ -43,6 +45,10 @@ get_header();
 			</article>
 			<?php do_action( 'neve_do_sidebar', 'single-post', 'right' ); ?>
 		</div>
-	</div>
+        <div id="fb-root"></div>
+        <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v16.0&appId=1985039484937664&autoLogAppEvents=1" nonce="AE0xGFiN"></script>
+        <div class="fb-comments" data-href="https://developers.facebook.com/docs/plugins/comments#configurator" data-width="" data-numposts="1"></div>
+
+    </div>
 <?php
 get_footer();
