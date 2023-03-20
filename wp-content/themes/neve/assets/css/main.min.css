@@ -1,3 +1,5 @@
-
+body.home .single-page-container .blog-sidebar {
+  display: none;
+}
 
 /*# sourceMappingURL=main.min.css.map */
