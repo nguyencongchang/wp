@@ -17,6 +17,12 @@ do_action( 'neve_before_primary_end' ); ?>
 
 </main><!--/.neve-main-->
 
+<footer>
+    <?php
+        $title = get_field('title', 'options');
+    ?>
+    <h2><?php echo $title;?></h2>
+</footer>
 <?php
 
 /**
