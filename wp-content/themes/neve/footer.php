@@ -17,7 +17,7 @@ do_action( 'neve_before_primary_end' ); ?>
 
 </main><!--/.neve-main-->
 
-<footer>
+<footer class="bg-footer">
     <?php
         $title = get_field('title', 'options');
     ?>

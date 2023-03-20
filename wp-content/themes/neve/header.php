@@ -25,13 +25,33 @@ do_action( 'neve_html_start_before' );
 
 ?>
 <html <?php language_attributes(); ?>>
-<div>
-    // Header
-    ..
-    <?php
-    do_shortcode("[multilanguage_switcher]");
-    if (function_exists('mltlngg_display_switcher')) mltlngg_display_switcher();
-    ?>
+<div class="header-container-info">
+<div class="container">
+    <div class="header-info">
+        <div>
+<!--            <img class="header-icon" src="--><?php //echo get_template_directory_uri(); ?><!--/assets/img/header/mobile-screen-button-solid.svg" alt="bg-img" />-->
+            <span class="header-info-text">+84 28 541 61181</span>
+        </div>
+        <div>
+            <span class="header-info-text">info@trivietco.vn</span>
+        </div>
+    </div>
+</div>
+</div>
+<div class="header-container-logo">
+<div class="container d-flex header-logo-language">
+    <div>
+        <img class="header-logo" src="<?php echo get_template_directory_uri(); ?>/assets/img/header/newlogo-edit-02.png" alt="new-logo" />
+        <img class="header-logo" src="<?php echo get_template_directory_uri(); ?>/assets/img/header/iso.png" alt="iso" />
+    </div>
+
+    <div>
+        <?php
+        do_shortcode("[multilanguage_switcher]");
+        if (function_exists('mltlngg_display_switcher')) mltlngg_display_switcher();
+        ?>
+    </div>
+</div>
 </div>
 <head>
 	<?php
@@ -127,7 +147,8 @@ do_action( 'neve_body_start_after' );
 	?>
 
 	<main id="content" class="neve-main">
-x
+        <img class="header-background" src="<?php echo get_template_directory_uri(); ?>/assets/img/header/slider-tv2.png" alt="bg-img" />
+
 <?php
 /**
  * Executes actions after main tag is opened.
