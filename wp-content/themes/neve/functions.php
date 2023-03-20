@@ -8,6 +8,8 @@
  * @package Neve
  */
 
+use function App\sage;
+
 define( 'NEVE_VERSION', '3.5.5' );
 define( 'NEVE_INC_DIR', trailingslashit( get_template_directory() ) . 'inc/' );
 define( 'NEVE_ASSETS_URL', trailingslashit( get_template_directory_uri() ) . 'assets/' );
@@ -193,3 +195,15 @@ function create_custom_post_types() {
 }
 
 add_action( 'init', 'create_custom_post_types' );
+
+function my_custom_styles() {
+    wp_enqueue_style( 'custom-style', get_stylesheet_directory_uri() . '/assets/css/main.min.css' );
+}
+
+add_action( 'wp_enqueue_scripts', 'my_custom_styles' );
+
+function my_custom_scripts() {
+    wp_enqueue_script( 'custom-script', get_stylesheet_directory_uri() . '/assets/js/main.js', array( 'jquery' ), '1.0', true );
+}
+
+add_action( 'wp_enqueue_scripts', 'my_custom_scripts' );

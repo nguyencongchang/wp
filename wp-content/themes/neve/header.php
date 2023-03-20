@@ -26,14 +26,14 @@ do_action( 'neve_html_start_before' );
 ?>
 <html <?php language_attributes(); ?>>
 <div>
+    // Header
+    ..
     <?php
     do_shortcode("[multilanguage_switcher]");
     if (function_exists('mltlngg_display_switcher')) mltlngg_display_switcher();
     ?>
 </div>
 <head>
-    <script src="https://apps.elfsight.com/p/platform.js" defer></script>
-    <div class="elfsight-app-b73d5cb2-8eae-4c4e-aef0-fea544b3510d"></div>
 	<?php
 	/**
 	 * Executes actions after the head tag is opened.
