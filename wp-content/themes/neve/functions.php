@@ -201,21 +201,18 @@ add_action( 'init', 'create_custom_post_types' );
 
 function my_custom_styles() {
     wp_enqueue_style( 'custom-style', get_stylesheet_directory_uri() . '/assets/css/main.min.css' );
+    wp_enqueue_style( 'bootstrap-css', get_stylesheet_directory_uri() . '/assets/bootstrap/bootstrap.min.css' );
 }
 
 add_action( 'wp_enqueue_scripts', 'my_custom_styles' );
 
 function my_custom_scripts() {
     wp_enqueue_script( 'custom-script', get_stylesheet_directory_uri() . '/assets/js/main.js', array( 'jquery' ), '1.0', true );
+    wp_enqueue_script( 'animationCounter', get_stylesheet_directory_uri() . '/assets/js/animationCounter.js', array( 'jquery' ), '1.0', true );
+    wp_enqueue_script( 'bootstrap-script', get_stylesheet_directory_uri() . '/assets/bootstrap/bootstrap.min.js', array( 'jquery' ), '1.0', true );
 }
 
 add_action( 'wp_enqueue_scripts', 'my_custom_scripts' );
-
-function animationCounter() {
-    wp_enqueue_script( 'animationCounter', get_stylesheet_directory_uri() . '/assets/js/animationCounter.js', array( 'jquery' ), '1.0', true );
-}
-
-add_action( 'wp_enqueue_scripts', 'animationCounter' );
 
 if (function_exists('acf_add_options_page')) {
     acf_add_options_page();

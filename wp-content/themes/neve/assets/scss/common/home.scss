@@ -24,10 +24,6 @@
   width: 100%
 }
 
-.d-flex {
-  display: flex;
-}
-
 .header-container-logo {
   padding: 10px 0;
 }
@@ -99,13 +95,19 @@
     text-transform: uppercase;
     color: #2a5baa;
     font-size: 40px;
-    font-weight: bold;
+    font-weight: 700;
     line-height: 1.3;
     margin-bottom: 22px;
   }
-  .section-information {
-    display: flex;
 
+  .desc {
+    font-size: 16px;
+    font-weight: 700;
+    color: #000;
+    font-style: italic;
+  }
+
+  .section-information {
     .content-left {
       width: 55%;
 
@@ -132,6 +134,7 @@
 
         &:hover {
           background: #ec2027;
+          text-decoration: none;
         }
       }
     }
@@ -178,6 +181,19 @@
   }
 
   .cnv-services {
+    background-color: #f8f9fb;
+    padding-top: 1px;
+    background-image: url("../img/home/bg-dot1.png");
+    background-position: left 117px bottom 48px;
+    background-repeat: no-repeat;
+    padding-bottom: 50px;
 
+    .cnv-head {
+      text-align: center;
+    }
+  }
+
+  .cnv-statistic {
+    background-image: url("../img/home/st-bg.png");
   }
 }

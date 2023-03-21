@@ -1,9 +1,10 @@
 jQuery(document).ready(function($) {
-    //
-    console.log('1');
-    $('.hc-counter').animationCounter({
+    let counterYear = $('.hc-counter');
+    let number = counterYear.attr('data-counter');
+
+    counterYear.animationCounter({
         start: 1,
-        end: 15,
+        end: number,
         step: 1,
         delay: 100
     });
