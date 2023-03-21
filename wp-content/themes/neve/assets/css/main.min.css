@@ -77,6 +77,81 @@
   font-size: 20px;
 }
 
+.page-home h2 {
+  text-transform: uppercase;
+  color: #2a5baa;
+  font-size: 40px;
+  font-weight: bold;
+  line-height: 1.3;
+  margin-bottom: 22px;
+}
+.page-home .section-information {
+  display: flex;
+}
+.page-home .section-information .content-left {
+  width: 55%;
+}
+.page-home .section-information .content-left span {
+  font-size: 16px;
+  font-weight: 500;
+  color: #000;
+  font-style: italic;
+}
+.page-home .section-information .content-left .btn-show-more {
+  background: #2a5baa;
+  color: #fff;
+  border-radius: 50px;
+  width: 180px;
+  height: 46px;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 44px;
+  text-align: center;
+  margin-top: 30px;
+}
+.page-home .section-information .content-left .btn-show-more:hover {
+  background: #ec2027;
+}
+.page-home .section-information .content-right {
+  margin-top: 50px;
+  margin-left: -15px;
+  text-align: center;
+  position: relative;
+}
+.page-home .section-information .content-right .caption {
+  width: 170px;
+  height: 170px;
+  background-image: url("../img/home/ab-img-bg.png");
+  background-size: cover;
+  position: absolute;
+  right: -34px;
+  max-width: 40%;
+  border-radius: 5px;
+  overflow: hidden;
+  color: #fff;
+  text-align: center;
+  bottom: 73px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.page-home .section-information .content-right .caption .num {
+  font-weight: 500;
+  font-size: 44px;
+  line-height: 1.45;
+}
 .bg-footer {
   background-image: url("../img/footer/bg-foot.png");
   background-size: cover;
