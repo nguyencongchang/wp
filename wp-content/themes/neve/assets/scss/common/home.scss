@@ -45,14 +45,22 @@
 }
 
 .header .nv-nav-wrap .nav-menu-primary {
-  //li {
-  //  display: inline-block;
-  //  vertical-align: middle;
-  //  font-size: 14px;
-  //  margin-right: 73px;
-  //}
+
+  ul {
+    margin-bottom: 0;
+  }
+
+  a:hover {
+    text-decoration: none;
+  }
 
   .sub-menu {
+    li {
+      .wrap {
+        padding: 6px 10px;
+      }
+      min-width: 100px;
+    }
     background: #2a5baa;
   }
 
@@ -196,4 +204,16 @@
   .cnv-statistic {
     background-image: url("../img/home/st-bg.png");
   }
+}
+
+.reveal{
+  position: relative;
+  transform: translateY(50px);
+  opacity: 0;
+  transition: 1s all ease;
+}
+
+.reveal.active{
+  transform: translateY(0);
+  opacity: 1;
 }
