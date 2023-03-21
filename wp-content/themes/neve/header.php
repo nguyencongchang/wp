@@ -28,12 +28,19 @@ do_action( 'neve_html_start_before' );
 <div class="header-container-info">
 <div class="container">
     <div class="header-info">
-        <div>
-<!--            <img class="header-icon" src="--><?php //echo get_template_directory_uri(); ?><!--/assets/img/header/mobile-screen-button-solid.svg" alt="bg-img" />-->
-            <span class="header-info-text">+84 28 541 61181</span>
+        <div class="header-info-text">
+            <i class="fa fa-mobile"></i>
+            <?php
+            $headerPhone = get_field('phone-header', 'options');
+            ?>
+            <span><?php echo $headerPhone;?></span>
         </div>
-        <div>
-            <span class="header-info-text">info@trivietco.vn</span>
+        <div class="header-info-text">
+            <i class="fa fa-envelope"></i>
+            <?php
+            $headerEmail = get_field('email-header', 'options');
+            ?>
+            <span><?php echo $headerEmail;?></span>
         </div>
     </div>
 </div>
