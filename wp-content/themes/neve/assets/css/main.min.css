@@ -101,16 +101,7 @@
   color: #000;
   font-style: italic;
 }
-.page-home .section-information .content-left {
-  width: 55%;
-}
-.page-home .section-information .content-left span {
-  font-size: 16px;
-  font-weight: 500;
-  color: #000;
-  font-style: italic;
-}
-.page-home .section-information .content-left .btn-show-more {
+.page-home .btn-show-more {
   background: #2a5baa;
   color: #fff;
   border-radius: 50px;
@@ -124,9 +115,18 @@
   text-align: center;
   margin-top: 30px;
 }
-.page-home .section-information .content-left .btn-show-more:hover {
+.page-home .btn-show-more:hover {
   background: #ec2027;
   text-decoration: none;
+}
+.page-home .section-information .content-left {
+  width: 55%;
+}
+.page-home .section-information .content-left span {
+  font-size: 16px;
+  font-weight: 500;
+  color: #000;
+  font-style: italic;
 }
 .page-home .section-information .content-right {
   margin-top: 50px;
@@ -166,19 +166,18 @@
   font-size: 44px;
   line-height: 1.45;
 }
-.page-home .cnv-services {
+.page-home .section-services {
   background-color: #f8f9fb;
-  padding-top: 1px;
   background-image: url("../img/home/bg-dot1.png");
   background-position: left 117px bottom 48px;
   background-repeat: no-repeat;
   padding-top: 40px;
   padding-bottom: 50px;
 }
-.page-home .cnv-services .cnv-head {
+.page-home .section-services .head {
   text-align: center;
 }
-.page-home .cnv-statistic {
+.page-home .section-statistic {
   background-image: url("../img/home/st-bg.png");
   padding-top: 46px;
   padding-bottom: 24px;
@@ -186,7 +185,7 @@
   background-position: center;
   background-size: cover;
 }
-.page-home .cnv-statistic .st-col:after {
+.page-home .section-statistic .st-col:after {
   content: "";
   width: 1px;
   height: 100px;
@@ -196,21 +195,121 @@
   position: absolute;
   right: 15px;
 }
-.page-home .cnv-statistic .st-col .statis {
+.page-home .section-statistic .st-col .statis {
   color: #fff;
   margin-bottom: 30px;
   padding-left: 25px;
 }
-.page-home .cnv-statistic .st-col .statis .icon {
+.page-home .section-statistic .st-col .statis .icon {
   display: inline-block;
   vertical-align: middle;
   margin-right: 15px;
 }
-.page-home .cnv-statistic .st-col .statis .num {
+.page-home .section-statistic .st-col .statis .num {
   display: inline-block;
   vertical-align: middle;
   font-size: 44px;
   font-weight: 500;
+}
+.page-home .section-project {
+  padding-bottom: 50px;
+  background-image: url("../img/home/bg-dot2.png");
+  background-position: bottom;
+  background-repeat: repeat-x;
+  background-color: #f8f9fb;
+  padding-top: 1px;
+}
+.page-home .section-project .container.v2 {
+  max-width: 1512px;
+}
+.page-home .section-project .head {
+  margin-top: 40px;
+  margin-bottom: 38px;
+}
+.page-home .section-project .project {
+  position: relative;
+  margin-bottom: 30px;
+  cursor: pointer;
+}
+.page-home .section-project .project a.img {
+  display: flex !important;
+  justify-content: center;
+}
+.page-home .section-project .project a.img img {
+  display: block;
+  width: 100%;
+}
+.page-home .section-project .project .i-title {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 15px 10px 15px 30px;
+  background: rgba(0, 0, 0, 0.6);
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+.page-home .section-project .project .i-title i {
+  color: #ec2027;
+  margin-right: 5px;
+}
+.page-home .section-project .project .caption {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.8);
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  padding: 15px 10px 15px 30px;
+  color: #fff;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+}
+.page-home .section-project .project .caption .title {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+.page-home .section-project .project .caption .title i {
+  color: #ec2027;
+  margin-right: 5px;
+}
+.page-home .section-project .project .caption p.excerpt {
+  font-size: 14px;
+  line-height: 22px;
+  margin-bottom: 11px;
+}
+.page-home .section-project .project .caption p.excerpt a {
+  display: none;
+}
+.page-home .section-project .project .caption .more {
+  color: #ec2027;
+  text-decoration: none;
+}
+.page-home .section-project .project .caption .more i.arrow_right {
+  font-size: 18px;
+  margin-left: 6px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: -2px;
+}
+.page-home .section-project .project .caption .more i.arrow_right:before {
+  content: "$";
+}
+.page-home .section-project .project:hover .caption {
+  opacity: 1;
+}
+.page-home .section-project .project:hover .i-title {
+  opacity: 0;
+}
+.page-home .section-project .btn-show-more {
+  display: block;
+  margin: 0 auto;
 }
 
 .reveal {

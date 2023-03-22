@@ -165,6 +165,9 @@ function create_custom_post_types() {
             'public' => true,
             'has_archive' => true,
             'rewrite'     => array( 'slug' => 'du-an' ),
+            'hierarchical'        => false,
+            'menu_position'       => null,
+            'supports'            => array( 'title', 'editor', 'thumbnail' )
         )
     );
 
@@ -178,6 +181,9 @@ function create_custom_post_types() {
             'public' => true,
             'has_archive' => true,
             'rewrite'     => array( 'slug' => 'san-pham' ),
+            'hierarchical'        => false,
+            'menu_position'       => null,
+            'supports'            => array( 'title', 'editor', 'thumbnail' )
         )
     );
 
@@ -191,6 +197,11 @@ function create_custom_post_types() {
             'public' => true,
             'has_archive' => true,
             'rewrite'     => array( 'slug' => 'dich-vu' ),
+            'capability_type'     => 'post',
+            'hierarchical'        => false,
+            'menu_position'       => null,
+            'supports'            => array( 'title', 'editor', 'thumbnail' )
+
         )
     );
 
@@ -202,6 +213,8 @@ add_action( 'init', 'create_custom_post_types' );
 function my_custom_styles() {
     wp_enqueue_style( 'custom-style', get_stylesheet_directory_uri() . '/assets/css/main.min.css' );
     wp_enqueue_style( 'bootstrap-css', get_stylesheet_directory_uri() . '/assets/bootstrap/bootstrap.min.css' );
+    wp_enqueue_style( 'slick-css', get_stylesheet_directory_uri() . '/assets/slick/slick.css' );
+    wp_enqueue_style( 'slick-theme-css', get_stylesheet_directory_uri() . '/assets/slick/slick-theme.css' );
 }
 
 add_action( 'wp_enqueue_scripts', 'my_custom_styles' );
@@ -210,6 +223,7 @@ function my_custom_scripts() {
     wp_enqueue_script( 'custom-script', get_stylesheet_directory_uri() . '/assets/js/main.js', array( 'jquery' ), '1.0', true );
     wp_enqueue_script( 'animationCounter', get_stylesheet_directory_uri() . '/assets/js/animationCounter.js', array( 'jquery' ), '1.0', true );
     wp_enqueue_script( 'bootstrap-script', get_stylesheet_directory_uri() . '/assets/bootstrap/bootstrap.min.js', array( 'jquery' ), '1.0', true );
+    wp_enqueue_script( 'slick-script', get_stylesheet_directory_uri() . '/assets/slick/slick.min.js', array( 'jquery' ), '1.0', true );
 }
 
 add_action( 'wp_enqueue_scripts', 'my_custom_scripts' );

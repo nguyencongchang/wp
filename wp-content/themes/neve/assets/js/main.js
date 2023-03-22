@@ -41,4 +41,19 @@ jQuery(document).ready(function($) {
     }
 
     window.addEventListener("scroll", reveal);
+
+    $('.slick-slide-product').slick({
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        dots: true,
+        autoplay: true
+    });
+
+    $('.mile-cas').slick({
+        infinite: true,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        autoplay: true
+    });
 });

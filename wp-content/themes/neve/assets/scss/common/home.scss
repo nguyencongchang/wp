@@ -115,6 +115,26 @@
     font-style: italic;
   }
 
+  .btn-show-more {
+    background: #2a5baa;
+    color: #fff;
+    border-radius: 50px;
+    width: 180px;
+    height: 46px;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 44px;
+    text-align: center;
+    margin-top: 30px;
+
+    &:hover {
+      background: #ec2027;
+      text-decoration: none;
+    }
+  }
+
   .section-information {
     .content-left {
       width: 55%;
@@ -124,26 +144,6 @@
         font-weight: 500;
         color: #000;
         font-style: italic;
-      }
-
-      .btn-show-more {
-        background: #2a5baa;
-        color: #fff;
-        border-radius: 50px;
-        width: 180px;
-        height: 46px;
-        display: inline-block;
-        vertical-align: middle;
-        font-size: 16px;
-        font-weight: 500;
-        line-height: 44px;
-        text-align: center;
-        margin-top: 30px;
-
-        &:hover {
-          background: #ec2027;
-          text-decoration: none;
-        }
       }
     }
 
@@ -188,21 +188,20 @@
     }
   }
 
-  .cnv-services {
+  .section-services {
     background-color: #f8f9fb;
-    padding-top: 1px;
     background-image: url("../img/home/bg-dot1.png");
     background-position: left 117px bottom 48px;
     background-repeat: no-repeat;
     padding-top: 40px;
     padding-bottom: 50px;
 
-    .cnv-head {
+    .head {
       text-align: center;
     }
   }
 
-  .cnv-statistic {
+  .section-statistic {
     background-image: url("../img/home/st-bg.png");
     padding-top: 46px;
     padding-bottom: 24px;
@@ -240,6 +239,127 @@
           font-weight: 500;
         }
       }
+    }
+  }
+
+  .section-project {
+    padding-bottom: 50px;
+    background-image: url("../img/home/bg-dot2.png");
+    background-position: bottom;
+    background-repeat: repeat-x;
+    background-color: #f8f9fb;
+    padding-top: 1px;
+
+    .container.v2 {
+      max-width: 1512px;
+    }
+
+    .head {
+      margin-top: 40px;
+      margin-bottom: 38px;
+    }
+
+    .project {
+      position: relative;
+      margin-bottom: 30px;
+      cursor: pointer;
+
+      a.img {
+        display: flex!important;
+        justify-content: center;
+
+        img {
+          display: block;
+          width: 100%;
+        }
+      }
+
+      .i-title {
+        color: #fff;
+        font-size: 18px;
+        font-weight: 500;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        padding: 15px 10px 15px 30px;
+        background: rgba(0, 0, 0, 0.6);
+        -webkit-transition: all .2s ease-in-out;
+        -o-transition: all .2s ease-in-out;
+        transition: all .2s ease-in-out;
+
+        i {
+          color: #ec2027;
+          margin-right: 5px;
+        }
+      }
+
+      .caption {
+        position: absolute;
+        background: rgba(0, 0, 0, 0.8);
+        -webkit-transition: all .2s ease-in-out;
+        -o-transition: all .2s ease-in-out;
+        transition: all .2s ease-in-out;
+        padding: 15px 10px 15px 30px;
+        color: #fff;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        opacity: 0;
+
+        .title {
+          font-size: 18px;
+          font-weight: 500;
+          margin-bottom: 12px;
+
+          i {
+            color: #ec2027;
+            margin-right: 5px;
+          }
+        }
+
+        p.excerpt {
+          font-size: 14px;
+          line-height: 22px;
+          margin-bottom: 11px;
+
+          a {
+            display: none;
+          }
+        }
+
+        .more {
+          color: #ec2027;
+          text-decoration: none;
+
+          i.arrow_right {
+            font-size: 18px;
+            margin-left: 6px;
+            display: inline-block;
+            vertical-align: middle;
+            margin-top: -2px;
+
+            &:before {
+              content: "\24";
+            }
+          }
+        }
+      }
+
+      &:hover {
+        .caption {
+          opacity: 1;
+        }
+
+        .i-title {
+          opacity: 0;
+        }
+      }
+    }
+
+    .btn-show-more {
+      display: block;
+      margin: 0 auto;
     }
   }
 }
