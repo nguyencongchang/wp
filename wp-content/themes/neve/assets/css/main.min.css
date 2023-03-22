@@ -50,6 +50,9 @@
 .header .nv-nav-wrap .nav-menu-primary a:hover {
   text-decoration: none;
 }
+.header .nv-nav-wrap .nav-menu-primary .wrap {
+  margin-right: 20px;
+}
 .header .nv-nav-wrap .nav-menu-primary .sub-menu {
   background: #2a5baa;
 }
@@ -61,7 +64,7 @@
 }
 .header .nv-nav-wrap .nav-menu-primary a {
   transition: all 0.2s ease-in-out;
-  color: #fff;
+  color: #fff !important;
   display: block;
   text-transform: uppercase;
   font-weight: 500;
@@ -80,7 +83,7 @@
   font-size: 14px;
 }
 .header .nv-nav-wrap .nav-menu-primary a:hover {
-  color: #000;
+  color: #000 !important;
 }
 .header .nv-nav-wrap .nav-menu-primary .caret {
   color: #fff;
@@ -355,6 +358,14 @@
 }
 .copyright span {
   color: #ec2027;
+}
+
+.gt_float_switcher .gt-selected .gt-current-lang span.gt_float_switcher-arrow {
+  transform: rotate(0deg);
+}
+
+.header-logo-language .gtranslate_wrapper {
+  height: 100px;
 }
 
 /*# sourceMappingURL=main.min.css.map */

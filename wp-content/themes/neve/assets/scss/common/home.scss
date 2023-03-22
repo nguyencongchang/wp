@@ -54,6 +54,10 @@
     text-decoration: none;
   }
 
+  .wrap {
+    margin-right: 20px;
+  }
+
   .sub-menu {
     li {
       .wrap {
@@ -66,7 +70,7 @@
 
   a {
     transition: all 0.2s ease-in-out;
-    color: #fff;
+    color: #fff !important;
     display: block;
     text-transform: uppercase;
     font-weight: 500;
@@ -89,7 +93,7 @@
   }
 
   a:hover {
-    color: #000;
+    color: #000 !important;
   }
 
   .caret {
