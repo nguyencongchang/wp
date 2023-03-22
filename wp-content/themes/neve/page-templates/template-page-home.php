@@ -77,18 +77,20 @@ get_header();
                             <?php while (have_rows('section-service')): ?>
                                 <?php the_row(); ?>
                                 <?php if(have_rows('block-counter-number')) :?>
+                                <?php $i = 0; ?>
                                     <?php while (have_rows('block-counter-number')): ?>
                                         <?php
                                         the_row();
+                                        $i++;
                                         $number = get_sub_field('number');
                                         $desc   = get_sub_field('description');
                                         $image  = get_sub_field('image');
                                         ?>
                                         <div class="col-lg-3 col-6 st-col">
                                             <div class="statis">
-                                                <div class="icon"><img src="/themes/default/images/st1.png" alt="icon" /></div>
-                                                <div class="num"><span class="hc-counter">32</span>+</div>
-                                                <p><?= $desc ?>></p>
+                                                <div class="icon"><img src="<?=$image['url'] ?>" alt="icon" /></div>
+                                                <div class="num"><span class="static-counter-<?= $i ?>" data-counter="<?= $number ?>"></span><span>+</span></div>
+                                                <p><?= $desc ?></p>
                                             </div>
                                         </div>
                                     <?php endwhile; ?>

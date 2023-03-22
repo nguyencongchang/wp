@@ -1,13 +1,28 @@
 jQuery(document).ready(function($) {
-    let counterYear = $('.hc-counter');
-    let number = counterYear.attr('data-counter');
+    const fieldNumberCounterArray = [
+        '.static-counter-1',
+        '.static-counter-2',
+        '.static-counter-3',
+        '.hc-counter'
+    ];
 
-    counterYear.animationCounter({
-        start: 1,
-        end: number,
-        step: 1,
-        delay: 100
+    fieldNumberCounterArray.map((item) => {
+        $(item).animationCounter({
+            start: 1,
+            end: $(item).attr('data-counter'),
+            step: 1,
+            delay: 100
+        });
     });
+
+    $('.static-counter-4').animationCounter({
+        start: 1,
+        end: $('.static-counter-4').attr('data-counter'),
+        step: 1,
+        delay: 20
+    });
+    $('.static-counter-4').next().text('%');
+
 
     function reveal() {
         let reveals = document.querySelectorAll(".reveal");

@@ -172,6 +172,7 @@
   background-image: url("../img/home/bg-dot1.png");
   background-position: left 117px bottom 48px;
   background-repeat: no-repeat;
+  padding-top: 40px;
   padding-bottom: 50px;
 }
 .page-home .cnv-services .cnv-head {
@@ -179,6 +180,37 @@
 }
 .page-home .cnv-statistic {
   background-image: url("../img/home/st-bg.png");
+  padding-top: 46px;
+  padding-bottom: 24px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.page-home .cnv-statistic .st-col:after {
+  content: "";
+  width: 1px;
+  height: 100px;
+  top: 50%;
+  margin-top: -62px;
+  background: rgba(255, 255, 255, 0.2);
+  position: absolute;
+  right: 15px;
+}
+.page-home .cnv-statistic .st-col .statis {
+  color: #fff;
+  margin-bottom: 30px;
+  padding-left: 25px;
+}
+.page-home .cnv-statistic .st-col .statis .icon {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 15px;
+}
+.page-home .cnv-statistic .st-col .statis .num {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 44px;
+  font-weight: 500;
 }
 
 .reveal {

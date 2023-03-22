@@ -54,8 +54,7 @@ do_action( 'neve_html_start_before' );
 
     <div>
         <?php
-        do_shortcode("[multilanguage_switcher]");
-        if (function_exists('mltlngg_display_switcher')) mltlngg_display_switcher();
+        echo do_shortcode("[gtranslate]");
         ?>
     </div>
 </div>
