@@ -51,7 +51,7 @@ do_action('neve_before_primary_end'); ?>
                                 </div>
                                 <div class="f-line"><i class="fa fa-phone" aria-hidden="true"></i><span class="ml-2"><?php echo $phone; ?></span></div>
                                 <div class="f-line"><i class="fa fa-fax" aria-hidden="true"></i><span class="ml-2"><?php echo $fax; ?></span></div>
-                                <div class="f-line"><i class="fa fa-envelope" aria-hidden="true"></i><span class="ml-2"><?php echo $email; ?></span> |&nbsp;
+                                <div class="f-line"><i class="fa fa-envelope" aria-hidden="true"></i><span class="ml-2"><?php echo $email; ?></span>
                                 </div>
                             </div>
 
@@ -61,6 +61,20 @@ do_action('neve_before_primary_end'); ?>
                 </div>
             </div>
 
+        </div>
+    </div>
+
+    <div class="copyright">
+        <?php
+        $copyRightName = get_field('copy-right-name', 'options');
+        $copyRightReserved = get_field('copy-right-reserved', 'options');
+        $designBy = get_field('design-by', 'options');
+        ?>
+        <div class="container">
+            <div class="row justify-content-between align-items-center text-center">
+                <div class="col-lg-auto"><span><?php echo $copyRightName; ?></span> <label><?php echo $copyRightReserved; ?></label></div>
+                <div class="col-lg-auto">Designed by: <a class="smooth" href="https://cnv.vn" title=""><?php echo $designBy; ?></a></div>
+            </div>
         </div>
     </div>
 
