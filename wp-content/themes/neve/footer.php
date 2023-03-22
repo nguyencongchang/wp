@@ -23,7 +23,13 @@ do_action('neve_before_primary_end'); ?>
     ?>
     <div class="container reveal">
         <div class="row align-items-center">
+            <div class="col-lg-3 text-center order-lg-last wow fadeInUp"
+                 style="visibility: visible; animation-name: fadeInUp;">
+                <p><img src="<?php echo get_template_directory_uri(); ?>/assets/img/header/newlogo-edit-02.png" alt="new-logo" />
+                </p>
+            </div>
             <div class="col-lg-9">
+
                 <h4 class="name wow fadeInUp"
                     style="visibility: visible; animation-name: fadeInUp;"><?php echo $title; ?></h4>
                 <div class="row">
@@ -35,9 +41,8 @@ do_action('neve_before_primary_end'); ?>
                             $phone   = get_sub_field('phone');
                             $fax     = get_sub_field('fax');
                             $email   = get_sub_field('email');
-
                             ?>
-                            <div class="col-lg-7 col-md-6 wow fadeInUp"
+                            <div class="col-lg-6 col-md-6 wow fadeInUp"
                                  style="visibility: visible; animation-name: fadeInUp;">
                                 <div class="f-line"><i class="fa fa-home" aria-hidden="true"></i><span class="ml-2"><?php echo $office; ?></span> : <br>
                                     </div>
@@ -52,11 +57,6 @@ do_action('neve_before_primary_end'); ?>
 
                         <?php endwhile; ?>
                     <?php endif; ?>
-                    <div class="col-lg-3 order-lg-last text-center wow fadeInUp"
-                         style="visibility: visible; animation-name: fadeInUp;">
-                        <p><img class="header-logo" src="<?php echo get_template_directory_uri(); ?>/assets/img/header/newlogo-edit-02.png" alt="new-logo" />
-                        </p>
-                    </div>
 
                 </div>
             </div>

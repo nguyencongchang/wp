@@ -199,9 +199,6 @@
   padding-top: 75px;
   padding-bottom: 90px;
 }
-.bg-footer .row {
-  flex-wrap: inherit;
-}
 .bg-footer .name {
   text-transform: uppercase;
   color: #fff;
