@@ -144,7 +144,7 @@ get_header();
                                 <div class="caption">
                                     <h3 class="title"><i class="fa fa-check-circle"></i><?= $title ?></h3>
                                     <p class="excerpt"><?= $excerpt ?></p>
-                                    <a class="smooth more" href="<?= $pemarlink?>" title="">View Project <i class="arrow_right"></i></a>
+                                    <a class="smooth more" href="<?= $pemarlink ?>" title="">View Project <i class="arrow_right"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -157,7 +157,7 @@ get_header();
         </div>
         <div class="section-scope">
             <div class="container">
-                <div class="cnv-head">
+                <div class="head">
                     <?php if(have_rows('section-product')) :?>
                         <?php while (have_rows('section-product')): ?>
                         <?php the_row();
@@ -168,12 +168,12 @@ get_header();
                         <div class="desc"><?= $desc ?></div>
                         <?php endwhile; ?>
                     <?php endif; ?>
-                    <a class="smooth pro-btn" href="http://trivietco.vn/collections/dich-vu" title="">Sản phẩm</a>
+                    <a class="smooth pro-btn" href="" title="">Sản phẩm</a>
                 </div>
                 <div class="slick-slide-product">
                     <?php
                         $args = array(
-                            'post_type' => 'custom_post_type_2',
+                            'post_type' => 'custom_post_type_3',
                             'posts_per_page' => -1,
                             'order' => 'ASC',
                             'orderby' => 'title'
@@ -182,15 +182,17 @@ get_header();
                     <?php if($custom_query->have_posts()) :?>
                         <?php while ($custom_query->have_posts()) : ?>
                         <?php $custom_query->the_post();
-                            $title   = get_the_title();
-                            $image   = get_the_post_thumbnail_url();
-                            $pemarlink = get_the_permalink(); ?>
+                            $title     = get_the_title();
+                            $image     = get_the_post_thumbnail_url();
+                            $pemarlink = get_the_permalink();
+                            $date      = get_the_date('Ymd');
+                            ?>
                         <div class="slick-slide">
                             <div class="scope">
-                                <a class="img cnv-img-rectangle v2" href="http://trivietco.vn/dich-vu-steam-turbine" title="" tabindex="0">
+                                <a class="img cnv-img-rectangle v2" href="<?= $pemarlink ?>">
                                     <img src="<?= $image ?>" alt="" title="">
                                 </a>
-                                <p>20201007-29</p>
+                                <p><?= $date?></p>
                                 <h3 class="title"><a class="smooth" href="<?= $pemarlink ?>" title="" tabindex="0"><?= $title ?></a></h3>
                             </div>
                         </div>
@@ -242,38 +244,64 @@ get_header();
         <div class="section-article">
             <div class="container">
                 <div class="head">
-                    <h2 class="title wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">TIN TỨC</h2>
-                    <div class="desc wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;"></div>
+                    <?php if(have_rows('section-posts')) :?>
+                        <?php while (have_rows('section-posts')): ?>
+                            <?php the_row();
+                            $title = get_sub_field('title');
+                            $desc  = get_sub_field('description');
+                            ?>
+                            <h2 class="title"><?= $title?></h2>
+                            <div class="desc"><?= $desc ?></div>
+                        <?php endwhile; ?>
+                    <?php endif; ?>
                 </div>
-                <div class="article-cas def-cas wow fadeInUp slick-initialized slick-slider" style="visibility: visible; animation-name: fadeInUp;">
-                    <div aria-live="polite" class="slick-list draggable"><div class="slick-track" role="listbox" style="opacity: 1; width: 800px; left: 0px;"><div class="slick-slide slick-current slick-active" data-slick-index="0" aria-hidden="false" tabindex="-1" role="option" aria-describedby="slick-slide30" style="width: 370px;">
-                                <div class="article">
-                                    <a class="img cnv-img-square v2" href="http://trivietco.vn/blogs/tin-tuc/cong-ty-khai-thac-dau-khi-nhat-ban-muon-mo-rong-dau-tu-nhieu-linh-vuc" title="" tabindex="0">
-                                        <img src="/storage/images/news/camket.jpg" alt="" title="">
-                                    </a>
-                                    <p><i class="fa fa-calendar"></i>&nbsp; August 28, 2019</p>
-                                    <h3 class="title"><a class="smooth" href="http://trivietco.vn/blogs/tin-tuc/cong-ty-khai-thac-dau-khi-nhat-ban-muon-mo-rong-dau-tu-nhieu-linh-vuc" title="" tabindex="0">Công ty khai thác dầu khí Nhật Bản muốn mở rộng đầu tư nhiều lĩnh vực tại Việt Nam</a></h3>
-                                </div>
-                            </div><div class="slick-slide slick-active" data-slick-index="1" aria-hidden="false" tabindex="-1" role="option" aria-describedby="slick-slide31" style="width: 370px;">
-                                <div class="article">
-                                    <a class="img cnv-img-square v2" href="http://trivietco.vn/blogs/tin-tuc/phat-bieu-cua-chu-tich-hdqt-pham-van-thanh-tai-hntk-2018-trien-khai-nhiem-vu-2019" title="" tabindex="0">
-                                        <img src="/storage/blogs/ct-petrolimex-pvthanh.jpg" alt="" title="">
-                                    </a>
-                                    <p><i class="fa fa-calendar"></i>&nbsp; August 26, 2019</p>
-                                    <h3 class="title"><a class="smooth" href="http://trivietco.vn/blogs/tin-tuc/phat-bieu-cua-chu-tich-hdqt-pham-van-thanh-tai-hntk-2018-trien-khai-nhiem-vu-2019" title="" tabindex="0">Phát biểu của Chủ tịch HĐQT Phạm Văn Thanh tại HNTK 2018 &amp; triển khai nhiệm vụ 2019</a></h3>
-                                </div>
-                            </div></div></div>
-
+                <div class="article-cas">
+                    <div class="article">
+                        <?php
+                        $args = array(
+                            'post_type' => 'post',
+                            'posts_per_page' => 2,
+                            'order' => 'ASC',
+                            'orderby' => 'title' );
+                        $custom_query = new WP_Query( $args );  ?>
+                        <?php if($custom_query->have_posts()) :?>
+                        <?php while ($custom_query->have_posts()) : ?>
+                        <?php $custom_query->the_post();
+                        $title     = get_the_title();
+                        $image     = get_the_post_thumbnail_url();
+                        $pemarlink = get_the_permalink();
+                        $date      = get_the_date('F d,y');
+                        ?>
+                        <a class="img cnv-img-square v2" href="<?= $pemarlink ?>" title="" tabindex="0">
+                            <img src="<?= $image?>" alt="" title="">
+                        </a>
+                        <p><i class="fa fa-calendar"></i>&nbsp; <?= $date ?></p>
+                        <h3 class="title"><a class="smooth" href="<?= $pemarlink ?>" title="" tabindex="0"><?= $title ?></a></h3>
+                    </div>
+                    <?php endwhile; ?>
+                    <?php endif; ?>
+                    <?php wp_reset_postdata();  ?>
                 </div>
             </div>
-        </div>
-        <div class="cnv-partner">
+        <div class="section-partner">
             <div class="container">
-                <div class="partner-cas slick-initialized slick-slider">
-
+                <div class="partner-cas">
+                    <?php if(have_rows('section-brand')) :?>
+                    <?php while (have_rows('section-brand')): ?>
+                    <?php the_row();
+                    $brandImage = get_sub_field('image-brand');
+                    ?>
+                            <div class="slick-slide">
+                                <a class="smooth partner" href="" title="" tabindex="-1">
+                                    <img src="<?= $brandImage["url"] ?>" alt="" title="">
+                                </a>
+                            </div>
+                        <?php endwhile;?>
+                    <?php endif; ?>
                 </div>
             </div>
         </div>
+    </div>
 </div>
 
 <?php

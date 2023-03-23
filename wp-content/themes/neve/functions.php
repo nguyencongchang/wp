@@ -215,6 +215,7 @@ function my_custom_styles() {
     wp_enqueue_style( 'bootstrap-css', get_stylesheet_directory_uri() . '/assets/bootstrap/bootstrap.min.css' );
     wp_enqueue_style( 'slick-css', get_stylesheet_directory_uri() . '/assets/slick/slick.css' );
     wp_enqueue_style( 'slick-theme-css', get_stylesheet_directory_uri() . '/assets/slick/slick-theme.css' );
+    wp_enqueue_style( 'elegantIcon-css', get_stylesheet_directory_uri() . '/assets/elegantIcon/elegantIcon.css' );
 }
 
 add_action( 'wp_enqueue_scripts', 'my_custom_styles' );

@@ -11,8 +11,6 @@ $container_class = apply_filters( 'neve_container_class_filter', 'container', 's
 get_header();
 
 ?>
-    <div class="banner">banner bg-img</div>
-
 	<div class="<?php echo esc_attr( $container_class ); ?> single-post-container">
 		<div class="row">
 			<?php do_action( 'neve_do_sidebar', 'single-post', 'left' ); ?>
