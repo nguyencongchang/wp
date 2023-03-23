@@ -47,16 +47,29 @@ do_action( 'neve_html_start_before' );
 </div>
 <div class="header-container-logo">
 <div class="container">
-    <div class="row align-items-center justify-content-between col-mar-5">
-        <div class="col-auto">
+    <div class="row align-items-center justify-content-between col-12">
+        <div class="col-8">
             <img class="header-logo" src="<?php echo get_template_directory_uri(); ?>/assets/img/header/newlogo-edit-02.png" alt="new-logo" />
             <img class="header-logo" src="<?php echo get_template_directory_uri(); ?>/assets/img/header/iso.png" alt="iso" />
         </div>
+        <div>
 
-        <div class="col-auto">
+        </div>
+<!--        <div class="ct" id="search" style="display: block;">-->
+<!---->
+<!--        </div>-->
+        <div class="d-flex col-4 justify-content-end">
+            <div class="d-flex align-items-center mr-2 icon-search-header">
+                <i class="fas fa-search"></i>
+            </div>
+            <div class="d-none" id="block-form">
             <?php
-            echo do_shortcode("[gtranslate]");
+                echo get_search_form();
             ?>
+            </div>
+                <?php
+                echo do_shortcode("[gtranslate]");
+                ?>
         </div>
     </div>
 </div>

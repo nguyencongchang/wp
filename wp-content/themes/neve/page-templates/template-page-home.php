@@ -23,7 +23,7 @@ get_header();
 
 <div class="single-page-container">
     <div class="page-home">
-        <div class="section-information container">
+        <div class="section-information container reveal">
             <div class="row">
             <?php if(have_rows('section-information')) :?>
                 <?php while (have_rows('section-information')): ?>
@@ -54,7 +54,7 @@ get_header();
             </div>
             </div>
         </div>
-        <div class="section-services">
+        <div class="section-services reveal">
             <?php if(have_rows('section-service')) :?>
             <?php while (have_rows('section-service')): ?>
             <?php the_row();
@@ -70,7 +70,7 @@ get_header();
             <?php endif; ?>
 
         </div>
-        <div class="section-statistic">
+        <div class="section-statistic reveal">
                 <div class="container">
                     <div class="row sm-pad-5">
                         <?php if(have_rows('section-service')) :?>
@@ -100,7 +100,7 @@ get_header();
                     </div>
                 </div>
             </div>
-        <div class="section-project">
+        <div class="section-project reveal">
             <div class="container v2">
                 <div class="head text-center">
                     <?php if(have_rows('section-project')) :?>
@@ -155,7 +155,7 @@ get_header();
                 <a class="btn-show-more" href="/page/du-an">Xem thêm</a>
             </div>
         </div>
-        <div class="section-scope">
+        <div class="section-scope reveal">
             <div class="container">
                 <div class="head">
                     <?php if(have_rows('section-product')) :?>
@@ -202,7 +202,7 @@ get_header();
                 </div>
             </div>
         </div>
-        <div class="section-milestone">
+        <div class="section-milestone reveal">
             <div class="container">
                 <div class="head text-center">
                     <?php if(have_rows('section-milestones')) :?>
@@ -241,7 +241,7 @@ get_header();
                 <?php endif; ?>
             </div>
         </div>
-        <div class="section-article">
+        <div class="section-article reveal">
             <div class="container">
                 <div class="head">
                     <?php if(have_rows('section-posts')) :?>
