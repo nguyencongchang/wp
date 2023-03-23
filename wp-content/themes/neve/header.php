@@ -46,16 +46,18 @@ do_action( 'neve_html_start_before' );
 </div>
 </div>
 <div class="header-container-logo">
-<div class="container d-flex header-logo-language">
-    <div>
-        <img class="header-logo" src="<?php echo get_template_directory_uri(); ?>/assets/img/header/newlogo-edit-02.png" alt="new-logo" />
-        <img class="header-logo" src="<?php echo get_template_directory_uri(); ?>/assets/img/header/iso.png" alt="iso" />
-    </div>
+<div class="container">
+    <div class="row align-items-center justify-content-between col-mar-5">
+        <div class="col-auto">
+            <img class="header-logo" src="<?php echo get_template_directory_uri(); ?>/assets/img/header/newlogo-edit-02.png" alt="new-logo" />
+            <img class="header-logo" src="<?php echo get_template_directory_uri(); ?>/assets/img/header/iso.png" alt="iso" />
+        </div>
 
-    <div>
-        <?php
-        echo do_shortcode("[gtranslate]");
-        ?>
+        <div class="col-auto">
+            <?php
+            echo do_shortcode("[gtranslate]");
+            ?>
+        </div>
     </div>
 </div>
 </div>
