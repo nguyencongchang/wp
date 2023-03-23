@@ -25,7 +25,7 @@ get_header();
     do_action('neve_page_header', $context); ?>
     <div class="section-contact row">
         <div class="col-8">
-            Form
+            <?php echo do_shortcode("[contact-form-7 id='101' title='Contact']")?>
         </div>
         <div class="col-4 mb-lg-5">
             <div class="block-address fv-content">
@@ -57,6 +57,7 @@ get_header();
             width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"></iframe>
 </div>
+<div class="back-to-top"><i class="fa-solid fa-arrow-up"></i></div>
 
 <?php
 get_footer();

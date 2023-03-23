@@ -48,5 +48,7 @@ get_header();
         <div class="fb-comments" data-href="https://developers.facebook.com/docs/plugins/comments#configurator" data-width="" data-numposts="1"></div>
 
     </div>
+    <div class="back-to-top"><i class="fa-solid fa-arrow-up"></i></div>
+
 <?php
 get_footer();

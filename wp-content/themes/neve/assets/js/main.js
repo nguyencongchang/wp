@@ -48,6 +48,8 @@ jQuery(document).ready(function($) {
         slidesToScroll: 1,
         dots: true,
         autoplay: true,
+        prevArrow: '<div class="slick-prev"><i class="slick-arrow" aria-hidden="true"></i></div>',
+        nextArrow: '<div class="slick-next"><i class="slick-arrow" aria-hidden="true"></i></div>',
         responsive: [
             {
                 breakpoint: 992,
@@ -139,4 +141,31 @@ jQuery(document).ready(function($) {
         blockForm.removeClass('block-search');
         blockForm.addClass('d-none');
     })
+
+    $('.article-cas').slick({
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        dots: true,
+        autoplay: true,
+        prevArrow: '<div class="slick-prev"><i class="slick-arrow" aria-hidden="true"></i></div>',
+        nextArrow: '<div class="slick-next"><i class="slick-arrow" aria-hidden="true"></i></div>',
+        responsive: [
+            {
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 2
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1
+                }
+            }
+        ]
+    });
+
+    $('.back-to-top').css('display', 'block');
+
 });

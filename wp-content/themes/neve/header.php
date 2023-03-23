@@ -168,7 +168,26 @@ do_action( 'neve_body_start_after' );
 	?>
 
 	<main id="content" class="neve-main">
-        <img class="header-background" src="<?php echo get_template_directory_uri(); ?>/assets/img/header/slider-tv2.png" alt="bg-img" />
+<!--        <img class="header-background" src="--><?php //echo get_template_directory_uri(); ?><!--/assets/img/header/slider-tv2.png" alt="bg-img" />-->
+         <?php if (have_rows('block-banner', 'options')) : ?>
+                        <?php while (have_rows('block-banner', 'options')): ?>
+                            <?php the_row(); ?>
+                            <?php
+                                $bannerBg = get_sub_field('banner-image', 'options');
+                                $bannerTitle = get_sub_field('banner-title', 'options');
+                                $bannerDesc = get_sub_field('banner-description', 'options');
+                            ?>
+                           <div class="banner text-center d-flex align-items-center" style="background: url('<?= $bannerBg["url"] ?>')">
+                               <div>
+                                <h2 class="title"><?= $bannerTitle ?></h2>
+                                <span><?= $bannerDesc ?></span>
+                               </div>
+                           </div>
+                <?php endwhile; ?>
+            <?php endif;?>
+        <div>
+
+        </div>
 
 <?php
 /**

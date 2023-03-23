@@ -73,6 +73,7 @@ get_header();
     </div>
 </div>
 
+<div class="back-to-top"><i class="fa-solid fa-arrow-up"></i></div>
 <?php
 get_footer();
 ?>

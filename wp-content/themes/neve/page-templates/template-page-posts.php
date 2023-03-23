@@ -72,6 +72,7 @@ get_header();
         <?php do_action( 'neve_do_sidebar', $context, 'right' ); ?>
     </div>
 </div>
+<div class="back-to-top"><i class="fa-solid fa-arrow-up"></i></div>
 
 <?php
 get_footer();

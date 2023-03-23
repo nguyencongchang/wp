@@ -44,6 +44,44 @@
   color: #fff;
 }
 
+.grecaptcha-badge {
+  display: none;
+}
+
+#site-footer {
+  display: none;
+}
+
+.page-template-template-page-contact .grecaptcha-badge {
+  display: block;
+}
+
+.back-to-top {
+  display: none;
+  position: fixed;
+  cursor: pointer;
+  z-index: 999;
+  text-align: center;
+  right: 15px;
+  bottom: 15px;
+  font-size: 22px;
+  width: 40px;
+  height: 40px;
+  line-height: 44px;
+  background: #eb5254;
+  color: #fff;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 0 0 5px rgba(235, 82, 84, 0.5);
+  box-shadow: 0 0 0 5px rgba(235, 82, 84, 0.5);
+}
+.back-to-top:hover {
+  box-shadow: 0 0 0 5px rgba(235, 82, 84, 0.8);
+}
+
+.banner {
+  min-height: 708px;
+}
+
 .header .nv-nav-wrap .nav-menu-primary ul {
   margin-bottom: 0;
 }
@@ -301,9 +339,6 @@
   vertical-align: middle;
   margin-top: -2px;
 }
-.page-home .section-project .project .caption .more i.arrow_right:before {
-  content: "$";
-}
 .page-home .section-project .project:hover .caption {
   opacity: 1;
 }
@@ -318,7 +353,7 @@
   background-color: #f8f9fb;
   padding-top: 1px;
   padding-bottom: 50px;
-  background-image: url(../images/bg-dot1.png);
+  background-image: url("../img/home/bg-dot1.png");
   background-position: right 115px bottom 100px;
   background-repeat: no-repeat;
 }
@@ -347,19 +382,13 @@
   background: #ec2027;
   color: #fff;
 }
-.page-home .section-scope .slick-slide-product button.slick-arrow.slick-prev {
+.page-home .section-scope .slick-slide-product .slick-arrow.slick-prev {
   left: -110px;
 }
-.page-home .section-scope .slick-slide-product button.slick-arrow.slick-prev:before {
-  content: "#";
+.page-home .section-scope .slick-slide-product .slick-arrow.slick-next {
+  right: -80px;
 }
-.page-home .section-scope .slick-slide-product button.slick-arrow.slick-next {
-  right: -110px;
-}
-.page-home .section-scope .slick-slide-product button.slick-arrow.slick-next:after {
-  content: "$";
-}
-.page-home .section-scope .slick-slide-product button.slick-arrow {
+.page-home .section-scope .slick-slide-product .slick-arrow {
   width: 60px;
   height: 60px;
   background: #fff;
@@ -369,6 +398,10 @@
   color: #6d8199;
   top: 50%;
   margin-top: -58px;
+}
+.page-home .section-scope .slick-slide-product .slick-arrow:hover {
+  background: #ec2027;
+  color: #fff;
 }
 .page-home .section-scope .slick-slide-product .slick-slide {
   margin: 0 15px;
@@ -412,7 +445,8 @@
   width: 100%;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
-  min-height: 305px;
+  height: 305px;
+  max-height: 100%;
   object-fit: cover;
 }
 .page-home .section-scope .slick-slide-product .slick-slide .scope .img:before, .page-home .section-scope .slick-slide-product .slick-slide .scope .img:after {
@@ -535,6 +569,136 @@
   color: #2a5baa;
   line-height: 24px;
 }
+.page-home .section-article {
+  background-color: #f8f9fb;
+  padding-top: 5px;
+  padding-bottom: 50px;
+  background-image: url("../img/home/bg-dot1.png");
+  background-position: left 115px bottom 15px;
+  background-repeat: no-repeat;
+}
+.page-home .section-article .article-cas .slick-arrow.slick-prev {
+  left: -110px;
+}
+.page-home .section-article .article-cas .slick-arrow.slick-next {
+  right: -80px;
+}
+.page-home .section-article .article-cas .slick-arrow {
+  width: 60px;
+  height: 60px;
+  background: #fff;
+  font-size: 22px;
+  text-align: center;
+  line-height: 60px;
+  color: #6d8199;
+  top: 50%;
+  margin-top: -58px;
+}
+.page-home .section-article .article-cas .slick-arrow:hover {
+  background: #ec2027;
+  color: #fff;
+}
+.page-home .section-article .article-cas .article {
+  background: #fff;
+  padding: 15px 15px 33px 15px;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  margin: 10px 15px;
+}
+.page-home .section-article .article-cas .article:hover {
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.15);
+}
+.page-home .section-article .article-cas .article:hover .img {
+  background-color: #000;
+}
+.page-home .section-article .article-cas .article:hover .img img {
+  opacity: 0.5;
+}
+.page-home .section-article .article-cas .article:hover .img:before {
+  opacity: 1;
+}
+.page-home .section-article .article-cas .article:hover .img:after {
+  opacity: 1;
+}
+.page-home .section-article .article-cas .article:hover .title a {
+  color: #ec2027;
+}
+.page-home .section-article .article-cas .article .img {
+  display: block;
+  background: #000;
+  position: relative;
+  margin-bottom: 17px;
+  min-height: 305px;
+}
+.page-home .section-article .article-cas .article .img img {
+  display: block;
+  width: 100%;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  height: 305px;
+  object-fit: cover;
+  max-height: 100%;
+}
+.page-home .section-article .article-cas .article .img:before, .page-home .section-article .article-cas .article .img:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background: #fff;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  opacity: 0;
+}
+.page-home .section-article .article-cas .article .img:before {
+  height: 1px;
+  width: 50px;
+  margin-left: -25px;
+}
+.page-home .section-article .article-cas .article .img:after {
+  height: 60px;
+  width: 1px;
+  margin-top: -30px;
+}
+.page-home .section-article .article-cas .article p {
+  font-size: 16px;
+  margin-bottom: 10px;
+  padding-left: 10px;
+}
+.page-home .section-article .article-cas .article .title a {
+  text-decoration: none;
+  font-size: 20px;
+  margin-bottom: 10px;
+  padding-left: 10px;
+  color: #000;
+  font-weight: 700;
+}
+.page-home .section-article .article-cas .slick-dots {
+  margin-top: 34px;
+  text-align: center;
+}
+.page-home .section-article .article-cas .slick-dots li {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #6d8199;
+  margin: 0 11px;
+  border: none;
+  display: inline-block;
+  vertical-align: middle;
+  cursor: pointer;
+}
+.page-home .section-article .article-cas .slick-dots li button {
+  display: none;
+}
+.page-home .section-article .article-cas .slick-dots li.slick-active {
+  background: #ec2027;
+  -webkit-transform: scale(1.6);
+  transform: scale(1.6);
+}
+.page-home .section-partner {
+  padding: 100px 0;
+}
 .page-home .section-partner .partner-cas .slick-slide {
   margin: 0 10px;
 }
@@ -647,6 +811,7 @@
   .header-container-logo .header-logo {
     margin-right: 0;
   }
+
   .header-container-logo img {
     max-height: 40px;
   }
