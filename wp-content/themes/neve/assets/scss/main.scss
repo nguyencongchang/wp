@@ -1,6 +1,8 @@
 @import "common/home";
 @import "common/footer";
 @import "common/header";
-//body {
-//  background-color: red;
-//}
+@import "common/fonts";
+
+body {
+  font-family: PoppinsBold, sans-serif;
+}

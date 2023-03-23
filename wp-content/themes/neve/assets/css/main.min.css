@@ -622,5 +622,38 @@
     max-width: none !important;
   }
 }
+@font-face {
+  font-family: "PoppinsBold";
+  src: url("../../fonts/Poppins-Bold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "PoppinsLight";
+  src: url("../../fonts/Poppins-Light.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "PoppinsRegular";
+  src: url("../../fonts/Poppins-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "PoppinsSemiBold";
+  src: url("../../fonts/Poppins-SemiBold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "PoppinsItalic";
+  src: url("../../fonts/Poppins-Italic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  font-family: PoppinsBold, sans-serif;
+}
 
 /*# sourceMappingURL=main.min.css.map */
