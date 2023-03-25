@@ -33,7 +33,7 @@ get_header();
                     $content           = get_sub_field('content');
                     $image             = get_sub_field('image');
                     $yearsOfExperience = get_sub_field('years-of-experience');  ?>
-                    <div class="col-lg-6 content-left">
+                    <div class="col-12 col-lg-6 content-left">
                         <div class="cnv-head">
                             <h2 class="title"><?= $title ?></h2>
                             <div class="desc"><?= $desc ?></div>
@@ -43,7 +43,7 @@ get_header();
                         </div>
                         <a class="btn-show-more" href="/pages/ve-chung-toi">Xem thêm</a>
                     </div>
-                    <div class="col-lg-6 content-right">
+                    <div class="col-12 col-lg-6 content-right">
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/home/ab-img.png" alt="ab-img" />
                         <div class="caption">
                             <div class="num"><span class="hc-counter" data-counter="<?= $yearsOfExperience?>"></span>+</div>

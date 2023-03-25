@@ -136,11 +136,22 @@
   line-height: 1.3;
   margin-bottom: 22px;
 }
+@media (max-width: 768px) {
+  .page-home h2 {
+    font-size: 25px;
+    margin-bottom: 12px;
+  }
+}
 .page-home .desc {
   font-size: 16px;
   font-weight: 700;
   color: #000;
   font-style: italic;
+}
+@media (max-width: 768px) {
+  .page-home .desc {
+    font-size: 14px;
+  }
 }
 .page-home .btn-show-more {
   background: #2a5baa;
@@ -160,14 +171,22 @@
   background: #ec2027;
   text-decoration: none;
 }
+.page-home .section-information {
+  margin-top: 45px;
+}
 .page-home .section-information .content-left {
   width: 55%;
 }
-.page-home .section-information .content-left span {
+.page-home .section-information .content-left .s-content {
   font-size: 16px;
   font-weight: 500;
   color: #000;
   font-style: italic;
+}
+@media (max-width: 768px) {
+  .page-home .section-information .content-left .s-content {
+    font-size: 12px;
+  }
 }
 .page-home .section-information .content-right {
   margin-top: 50px;
@@ -855,6 +874,43 @@
   font-weight: normal;
   font-style: normal;
 }
+#secondary h2 {
+  font-weight: bold;
+  font-size: 22px;
+  text-transform: uppercase;
+  color: #555555;
+  margin-bottom: 20px;
+}
+#secondary h2:after {
+  content: "";
+  display: block;
+  height: 1px;
+  width: 50px;
+  margin-top: 10px;
+  background: #2A5BAA;
+}
+#secondary #block-8:before, #secondary #block-10:before {
+  content: "";
+  position: absolute;
+  left: -1px;
+  width: 3px;
+  background: #2A5BAA;
+  height: 50px;
+}
+#secondary a {
+  font-size: 16px;
+  color: #555555;
+  display: block;
+  padding-bottom: 14px;
+  border-bottom: solid 1px #e8e8e8;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+#secondary a:hover {
+  text-decoration: none;
+  color: #2A5BAA;
+}
+
 body {
   font-family: PoppinsBold, sans-serif;
 }

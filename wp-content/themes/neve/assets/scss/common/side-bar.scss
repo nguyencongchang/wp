@@ -1,0 +1,44 @@
+#secondary {
+  h2 {
+    font-weight: bold;
+    font-size: 22px;
+    text-transform: uppercase;
+    color: #555555;
+    margin-bottom: 20px;
+
+    &:after {
+      content: '';
+      display: block;
+      height: 1px;
+      width: 50px;
+      margin-top: 10px;
+      background: #2A5BAA;
+    }
+  }
+
+  #block-8, #block-10 {
+    &:before {
+      content: '';
+      position: absolute;
+      left: -1px;
+      width: 3px;
+      background: #2A5BAA;
+      height: 50px;
+    }
+  }
+
+  a {
+    font-size: 16px;
+    color: #555555;
+    display: block;
+    padding-bottom: 14px;
+    border-bottom: solid 1px #e8e8e8;
+    margin-bottom: 10px;
+    font-weight: 700;
+
+    &:hover {
+      text-decoration: none;
+      color: #2A5BAA;
+    }
+  }
+}

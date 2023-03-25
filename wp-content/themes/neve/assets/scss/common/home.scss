@@ -153,6 +153,11 @@
     font-weight: 700;
     line-height: 1.3;
     margin-bottom: 22px;
+
+    @media (max-width: 768px) {
+      font-size: 25px;
+      margin-bottom: 12px;
+    }
   }
 
   .desc {
@@ -160,6 +165,10 @@
     font-weight: 700;
     color: #000;
     font-style: italic;
+
+    @media (max-width: 768px) {
+      font-size: 14px;
+    }
   }
 
   .btn-show-more {
@@ -183,14 +192,20 @@
   }
 
   .section-information {
+    margin-top: 45px;
+
     .content-left {
       width: 55%;
 
-      span {
+      .s-content {
         font-size: 16px;
         font-weight: 500;
         color: #000;
         font-style: italic;
+
+        @media (max-width: 768px) {
+          font-size: 12px;
+        }
       }
     }
 
