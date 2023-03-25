@@ -168,4 +168,10 @@ jQuery(document).ready(function($) {
 
     $('.back-to-top').css('display', 'block');
 
+    const buttonMenuMobile = $('.menu-mobile-toggle .navbar-toggle')
+
+    $('.icon-menu-bar-tablet').on('click', function () {
+        buttonMenuMobile.trigger('click')
+    })
+
 });

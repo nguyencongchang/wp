@@ -49,15 +49,19 @@ do_action( 'neve_html_start_before' );
 <div class="container">
     <div class="row align-items-center justify-content-between col-12">
         <div class="col-8">
-            <img class="header-logo" src="<?php echo get_template_directory_uri(); ?>/assets/img/header/newlogo-edit-02.png" alt="new-logo" />
-            <img class="header-logo" src="<?php echo get_template_directory_uri(); ?>/assets/img/header/iso.png" alt="iso" />
+                <?php
+                $headerLogo = get_field('header-logo', 'options');
+                ?>
+                <?php
+                $headerIso  = get_field('header-iso', 'options');
+                ?>
+            <a href="/">
+                <img class="header-logo" src="<?php echo $headerLogo['url'] ?>" alt="logo" />
+            </a>
+            <img class="header-logo" src="<?php echo $headerIso['url'] ?>" alt="logo" />
         </div>
         <div>
-
         </div>
-<!--        <div class="ct" id="search" style="display: block;">-->
-<!---->
-<!--        </div>-->
         <div class="d-flex col-4 justify-content-end">
             <div class="d-flex align-items-center mr-2 icon-search-header">
                 <i class="fas fa-search"></i>
@@ -67,9 +71,14 @@ do_action( 'neve_html_start_before' );
                 echo get_search_form();
             ?>
             </div>
+            <div>
                 <?php
                 echo do_shortcode("[gtranslate]");
                 ?>
+            </div>
+            <div class="icon-menu-bar-tablet">
+                <i class="fa-solid fa-bars" style="color: #3776e1; font-size: 25px"></i>
+            </div>
         </div>
     </div>
 </div>
