@@ -32,13 +32,6 @@ get_header();
              */
             do_action( 'neve_before_page_header' );
 
-            /**
-             * Executes the rendering function for the page header.
-             *
-             * @param string $context The displaying location context.
-             *
-             * @since 1.0.7
-             */
             do_action( 'neve_page_header', $context );
 
             /**

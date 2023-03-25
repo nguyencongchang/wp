@@ -131,20 +131,20 @@ get_header();
                         <?php $custom_query->the_post();
                             $title   = get_the_title();
                             $image   = get_the_post_thumbnail_url();
-                            $pemarlink = get_the_permalink();
+                            $permalink = get_the_permalink();
                             $excerpt = get_the_excerpt();
                         ?>
 
                         <div class="col-lg-3 col-sm-6 wow fadeInUp">
                             <div class="project">
-                                <a class="img cnv-img-2x3" href="<?= $pemarlink?>" title="">
+                                <a class="img cnv-img-2x3" href="<?= $permalink?>" title="">
                                     <img src="<?= $image ?>" alt="" title="">
                                 </a>
                                 <h3 class="i-title"><i class="fa fa-check-circle"></i> <?= $title ?></h3>
                                 <div class="caption">
                                     <h3 class="title"><i class="fa fa-check-circle"></i><?= $title ?></h3>
                                     <p class="excerpt"><?= $excerpt ?></p>
-                                    <a class="smooth more" href="<?= $pemarlink ?>" title="">View Project <i class="fa-solid fa-arrow-right arrow_right"></i></a>
+                                    <a class="smooth more" href="<?= $permalink ?>" title="">View Project <i class="fa-solid fa-arrow-right arrow_right"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -184,16 +184,16 @@ get_header();
                         <?php $custom_query->the_post();
                             $title     = get_the_title();
                             $image     = get_the_post_thumbnail_url();
-                            $pemarlink = get_the_permalink();
+                            $permalink = get_the_permalink();
                             $date      = get_the_date('Ymd');
                             ?>
                         <div class="slick-slide">
                             <div class="scope">
-                                <a class="img cnv-img-rectangle v2" href="<?= $pemarlink ?>">
+                                <a class="img cnv-img-rectangle v2" href="<?= $permalink ?>">
                                     <img src="<?= $image ?>" alt="" title="">
                                 </a>
                                 <p><?= $date?></p>
-                                <h3 class="title"><a class="smooth" href="<?= $pemarlink ?>" title="" tabindex="0"><?= $title ?></a></h3>
+                                <h3 class="title"><a class="smooth" href="<?= $permalink ?>" title="" tabindex="0"><?= $title ?></a></h3>
                             </div>
                         </div>
                         <?php endwhile; ?>
@@ -268,15 +268,15 @@ get_header();
                             <?php $custom_query->the_post();
                             $title     = get_the_title();
                             $image     = get_the_post_thumbnail_url();
-                            $pemarlink = get_the_permalink();
+                            $permalink = get_the_permalink();
                             $date      = get_the_date('F d,y');
                             ?>
                                     <div class="article">
-                                    <a class="img cnv-img-square v2" href="<?= $pemarlink ?>" title="" tabindex="0">
+                                    <a class="img cnv-img-square v2" href="<?= $permalink ?>" title="" tabindex="0">
                             <img src="<?= $image?>" alt="" title="">
                         </a>
                         <p><i class="fa fa-calendar"></i>&nbsp; <?= $date ?></p>
-                        <h3 class="title"><a class="smooth" href="<?= $pemarlink ?>" title="" tabindex="0"><?= $title ?></a></h3>
+                        <h3 class="title"><a class="smooth" href="<?= $permalink ?>" title="" tabindex="0"><?= $title ?></a></h3>
                     </div>
                     <?php endwhile; ?>
                     <?php endif; ?>

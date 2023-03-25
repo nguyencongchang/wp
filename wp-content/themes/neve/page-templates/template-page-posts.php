@@ -20,7 +20,7 @@ $context = class_exists( 'WooCommerce', false ) && ( is_cart() || is_checkout() 
 
 get_header();
 ?>
-<div class="<?php echo esc_attr( $container_class ); ?> single-page-container">
+<div class="<?php echo esc_attr( $container_class ); ?> single-page-container page-template">
     <div class="row">
         <?php do_action( 'neve_do_sidebar', $context, 'left' ); ?>
         <div class="nv-single-page-wrap col">

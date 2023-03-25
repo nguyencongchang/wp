@@ -830,6 +830,7 @@
   .header-container-logo .header-logo {
     margin-right: 0;
   }
+
   .header-container-logo img {
     max-height: 40px;
   }
@@ -851,15 +852,19 @@
   .container {
     max-width: 100%;
   }
+
   .header-container-info {
     display: none;
   }
+
   .hide-on-tablet {
     display: none;
   }
+
   .hide-on-desktop {
     display: block;
   }
+
   .icon-menu-bar-tablet {
     display: block;
     display: flex;
@@ -867,15 +872,19 @@
     margin-left: 10px;
     cursor: pointer;
   }
+
   .wrapper .header .container {
     display: none;
   }
+
   .header-menu-sidebar-bg {
     background-color: #434343;
   }
+
   .header .nv-nav-wrap .nav-menu-primary .sub-menu {
     background-color: #4b4b4b;
   }
+
   .header-container-logo .gt_float_switcher img {
     width: 20px;
   }
@@ -954,6 +963,42 @@
 #secondary a:hover {
   text-decoration: none;
   color: #2A5BAA;
+}
+
+.breadcrumbs {
+  margin-top: 10px;
+  color: #000;
+}
+.breadcrumbs ul li {
+  display: inline-block;
+}
+.breadcrumbs ul li:first-child:after {
+  content: ">";
+  margin-left: 8px;
+  margin-right: 2px;
+}
+.breadcrumbs ul li a {
+  color: #000;
+}
+.breadcrumbs ul li a:hover {
+  color: #2A5BAA;
+  text-decoration: none;
+}
+
+.page-template .nv-page-title {
+  border-bottom: solid 1px #c0c0c0;
+}
+.page-template .nv-page-title h1 {
+  font-size: 18px;
+  font-weight: 700;
+  font-family: PoppinsBold, sans-serif;
+  border-bottom: solid 1px #c0c0c0;
+  margin-top: 2px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-bottom: -2px;
+  border-bottom: solid 3px #2A5BAA;
+  padding-bottom: 8px;
 }
 
 body {

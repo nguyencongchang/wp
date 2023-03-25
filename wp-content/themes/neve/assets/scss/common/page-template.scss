@@ -1,0 +1,46 @@
+.breadcrumbs {
+  margin-top: 10px;
+  color: #000;
+
+  ul {
+    li {
+      display: inline-block;
+
+      &:first-child {
+        &:after {
+          content: '>';
+          margin-left: 8px;
+          margin-right: 2px;
+        }
+      }
+
+      a {
+        color: #000;
+
+        &:hover {
+          color: #2A5BAA;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+
+.page-template {
+  .nv-page-title {
+    border-bottom: solid 1px #c0c0c0;
+
+    h1 {
+      font-size: 18px;
+      font-weight: 700;
+      font-family: PoppinsBold, sans-serif;
+      border-bottom: solid 1px #c0c0c0;
+      margin-top: 2px;
+      display: inline-block;
+      vertical-align: middle;
+      margin-bottom: -2px;
+      border-bottom: solid 3px #2A5BAA;
+      padding-bottom: 8px;
+    }
+  }
+}
