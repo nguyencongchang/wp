@@ -137,7 +137,6 @@ jQuery(document).ready(function($) {
     });
 
     $('.gt-selected').on('click', function() {
-        console.log('aa')
         blockForm.removeClass('block-search');
         blockForm.addClass('d-none');
     })
@@ -173,5 +172,12 @@ jQuery(document).ready(function($) {
     $('.icon-menu-bar-tablet').on('click', function () {
         buttonMenuMobile.trigger('click')
     })
+
+
+    const infoMobile = $('.info-mobile');
+
+    $('.header-menu-sidebar-bg').append(infoMobile);
+    infoMobile.before($('.header-menu-sidebar-bg .close-sidebar-panel'));
+    infoMobile.after($('.header-menu-sidebar-bg .header-menu-sidebar-inner'));
 
 });

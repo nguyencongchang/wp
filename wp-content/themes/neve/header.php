@@ -42,13 +42,23 @@ do_action( 'neve_html_start_before' );
             ?>
             <span><?php echo $headerEmail;?></span>
         </div>
+        <div class="info-mobile">
+            <div class="menu-item menu-item-type-post_type menu-item-object-page menu-item-32">
+                <i class="fa fa-mobile"></i>
+                <?php echo $headerPhone;?>
+            </div>
+            <div class="menu-item menu-item-type-post_type menu-item-object-page menu-item-32">
+                <i class="fa fa-envelope"></i>
+                <?php echo $headerEmail;?>
+            </div>
+        </div>
     </div>
 </div>
 </div>
 <div class="header-container-logo">
 <div class="container">
     <div class="row align-items-center justify-content-between col-12">
-        <div class="col-8">
+        <div class="col-md-8 col-5">
                 <?php
                 $headerLogo = get_field('header-logo', 'options');
                 ?>
@@ -62,8 +72,8 @@ do_action( 'neve_html_start_before' );
         </div>
         <div>
         </div>
-        <div class="d-flex col-4 justify-content-end">
-            <div class="d-flex align-items-center mr-2 icon-search-header">
+        <div class="d-flex col-7 col-md-4 justify-content-end">
+            <div class="d-flex align-items-center mr-4 icon-search-header">
                 <i class="fas fa-search"></i>
             </div>
             <div class="d-none" id="block-form">

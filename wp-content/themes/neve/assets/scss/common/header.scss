@@ -136,4 +136,23 @@
     }
   }
 
+  .header-menu-sidebar-inner {
+    .builder-item {
+      .nav-menu-primary {
+        li {
+          border-bottom: 1px solid #949494;
+        }
+      }
+    }
+  }
+
+  .info-mobile {
+    display: block !important;
+    padding-left: 20px;
+    color: #a8a8a8;
+  }
+}
+
+.info-mobile {
+  display: none;
 }
