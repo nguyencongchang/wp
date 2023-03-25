@@ -174,7 +174,7 @@ get_header();
                     <?php
                         $args = array(
                             'post_type' => 'custom_post_type_3',
-                            'posts_per_page' => -1,
+                            'posts_per_page' => 10,
                             'order' => 'ASC',
                             'orderby' => 'title'
                         );
@@ -259,7 +259,7 @@ get_header();
                         <?php
                         $args = array(
                             'post_type' => 'post',
-                            'posts_per_page' => -1,
+                            'posts_per_page' => 10,
                             'order' => 'ASC',
                             'orderby' => 'title' );
                             $custom_query = new WP_Query( $args );  ?>

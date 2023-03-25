@@ -35,10 +35,11 @@ get_header();
             <?php
             do_action( 'neve_page_header', $context );
             ?>
+            <div class="row">
             <?php
             $args = array(
-                'post_type' => 'custom_post_type_3',
-                'posts_per_page' => -1,
+                'post_type' => 'custom_post_type_2',
+                'posts_per_page' => 10,
                 'order' => 'ASC',
                 'orderby' => 'title'
             );
@@ -63,6 +64,7 @@ get_header();
                 <?php endwhile; ?>
             <?php endif; ?>
             <?php wp_reset_postdata();  ?>
+            </div>
         </div>
         <?php do_action( 'neve_do_sidebar', $context, 'right' ); ?>
     </div>
