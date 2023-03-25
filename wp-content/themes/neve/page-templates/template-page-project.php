@@ -32,7 +32,7 @@ get_header();
     <div class="container">
 
     <div class="row">
-        <div class="nv-single-page-wrap col">
+        <div class="nv-single-page-wrap col block-content">
             <?php
             $args = array(
                 'post_type' => 'custom_post_type_1',
@@ -50,8 +50,8 @@ get_header();
             $permalink = get_the_permalink();
             $excerpt   = get_the_excerpt();
             ?>
-                <div class="post2 clearfix">
-                    <a class="img hv-scale hv-over cnv-img-2x3" href="<?= $permalink ?>" title="">
+                <div class="post2 clearfix d-block d-lg-flex">
+                    <a class="img hv-scale hv-over cnv-img-2x3 w-100" href="<?= $permalink ?>" title="">
                         <img src="<?= $image ?>" alt="" title="">
                     </a>
                     <div class="ct">

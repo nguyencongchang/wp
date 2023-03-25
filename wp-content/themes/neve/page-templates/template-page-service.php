@@ -31,12 +31,11 @@ get_header();
     </div>
     <div class="container">
         <div class="row">
-            <?php do_action( 'neve_do_sidebar', $context, 'left' ); ?>
             <div class="nv-single-page-wrap col">
                 <?php
                 do_action( 'neve_page_header', $context );
                 ?>
-                <div class="row">
+                <div class="row block-content">
                 <?php
                 $args = array(
                 'post_type' => 'custom_post_type_3',

@@ -21,55 +21,55 @@ $context = class_exists( 'WooCommerce', false ) && ( is_cart() || is_checkout() 
 get_header();
 ?>
 <div class="<?php echo esc_attr( $container_class ); ?> single-page-container page-template">
-    <div class="row">
-        <?php do_action( 'neve_do_sidebar', $context, 'left' ); ?>
-        <div class="nv-single-page-wrap col">
-            <?php
-            /**
-             * Executes actions before the page header.
-             *
-             * @since 2.4.0
-             */
-            do_action( 'neve_before_page_header' );
-
-            /**
-             * Executes the rendering function for the page header.
-             *
-             * @param string $context The displaying location context.
-             *
-             * @since 1.0.7
-             */
-            do_action( 'neve_page_header', $context );
-
-            /**
-             * Executes actions before the page content.
-             *
-             * @param string $context The displaying location context.
-             *
-             * @since 1.0.7
-             */
-            do_action( 'neve_before_content', $context );
-
-            if ( have_posts() ) {
-                while ( have_posts() ) {
-                    the_post();
-                    get_template_part( 'template-parts/content', 'page' );
-                }
-            } else {
-                get_template_part( 'template-parts/content', 'none' );
-            }
-
-            /**
-             * Executes actions after the page content.
-             *
-             * @param string $context The displaying location context.
-             *
-             * @since 1.0.7
-             */
-            do_action( 'neve_after_content', $context );
-            ?>
+    <div class="breadcrumbs">
+        <div class="container">
+            <ul>
+                <li><a href="/">Trang chủ</a></li>
+                <li><a href="/page/tin-tuc">Tin Tức</a></li>
+            </ul>
         </div>
-        <?php do_action( 'neve_do_sidebar', $context, 'right' ); ?>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="nv-single-page-wrap col block-content">
+                <?php
+                do_action( 'neve_before_page_header' );
+                ?>
+                <?php
+                $args = array(
+                    'post_type' => 'post',
+                    'posts_per_page' => 4,
+                    'order' => 'ASC',
+                    'orderby' => 'title'
+                );
+                $custom_query = new WP_Query( $args );
+                ?>
+                <?php if($custom_query->have_posts()) :?>
+                <?php while ($custom_query->have_posts()) : ?>
+                <?php $custom_query->the_post();
+                $title     = get_the_title();
+                $image     = get_the_post_thumbnail_url();
+                $permalink = get_the_permalink();
+                $excerpt   = get_the_excerpt();
+                ?>
+                    <div class="post2 clearfix d-block d-lg-flex">
+                        <a class="img hv-scale hv-over cnv-img-2x3 w-100" href="<?= $permalink ?>" title="">
+                            <img src="<?= $image ?>" alt="" title="">
+                        </a>
+                        <div class="ct">
+                            <h2 class="title"><a class="smooth" href="<?= $permalink ?>" title=""><?= $title ?></a></h2>
+                            <div class="des">
+                                <?= $excerpt ?>
+                            </div>
+                            <a class="more" href="<?= $permalink ?>" title="">Xem chi tiết</a>
+                        </div>
+                    </div>
+                    <?php endwhile; ?>
+                <?php endif; ?>
+                <?php wp_reset_postdata();  ?>
+            </div>
+            <?php do_action( 'neve_do_sidebar', $context, 'right' ); ?>
+        </div>
     </div>
 </div>
 <div class="back-to-top"><i class="fa-solid fa-arrow-up"></i></div>

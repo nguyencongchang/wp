@@ -81,6 +81,24 @@
 .banner {
   min-height: 708px;
 }
+.banner h2 {
+  font-size: 55px;
+  color: #fff;
+}
+@media (max-width: 992px) {
+  .banner h2 {
+    font-size: 30px;
+  }
+}
+.banner span {
+  font-size: 30px;
+  color: #fff;
+}
+@media (max-width: 992px) {
+  .banner span {
+    font-size: 16px;
+  }
+}
 
 .header .nv-nav-wrap .nav-menu-primary ul {
   margin-bottom: 0;
@@ -530,6 +548,32 @@
 }
 .page-home .section-milestone .mile-cas button.slick-arrow {
   display: none;
+}
+.page-home .section-milestone .mile-cas:after {
+  content: "";
+  position: absolute;
+  top: 34px;
+  height: 3px;
+  background: #2a5baa;
+  left: 6px;
+  right: 6px;
+  z-index: -1;
+}
+.page-home .section-milestone .mile-cas .slick-list:before {
+  left: 5px;
+  background: linear-gradient(to right, #fff, #2a5baa);
+}
+.page-home .section-milestone .mile-cas .slick-list:after {
+  right: 5px;
+  background: linear-gradient(to right, #2a5baa, #fff);
+}
+.page-home .section-milestone .mile-cas .slick-list:before, .page-home .section-milestone .mile-cas .slick-list:after {
+  content: "";
+  height: 3px;
+  top: 34px;
+  position: absolute;
+  width: 80px;
+  pointer-events: none;
 }
 .page-home .section-milestone .mile-cas .item {
   text-align: center;
@@ -999,6 +1043,234 @@
   margin-bottom: -2px;
   border-bottom: solid 3px #2A5BAA;
   padding-bottom: 8px;
+}
+.page-template .block-content .scope {
+  background: #fff;
+  padding: 15px 15px 33px 15px;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+.page-template .block-content .scope:hover {
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.15);
+}
+.page-template .block-content .scope:hover .img {
+  background: #000;
+}
+.page-template .block-content .scope:hover .img:before {
+  opacity: 1;
+}
+.page-template .block-content .scope:hover .img:after {
+  opacity: 1;
+}
+.page-template .block-content .scope:hover .title a {
+  color: #ec2027;
+  text-decoration: none;
+}
+.page-template .block-content .scope .img {
+  background: transparent;
+}
+.page-template .block-content .scope .img:before {
+  height: 1px;
+  width: 50px;
+  margin-left: -25px;
+}
+.page-template .block-content .scope .img:after {
+  height: 60px;
+  width: 1px;
+  margin-top: -30px;
+}
+.page-template .block-content .scope .img:before, .page-template .block-content .scope .img:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background: #fff;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  opacity: 0;
+}
+.page-template .block-content .scope .img img {
+  display: block;
+  width: 100%;
+}
+.page-template .block-content .scope p {
+  font-size: 16px;
+  margin-bottom: 10px;
+  padding-left: 10px;
+}
+.page-template .block-content .scope .title {
+  font-size: 18px;
+  line-height: 23px;
+  font-weight: 600;
+  padding-left: 10px;
+}
+.page-template .block-content .scope .title a {
+  color: #000;
+}
+.page-template .block-content .post2 {
+  margin-top: 7px;
+  margin-bottom: 38px;
+  padding-bottom: 38px;
+  border-bottom: solid 1px #c2c2c2;
+}
+.page-template .block-content .post2:hover .img img {
+  opacity: 0.7;
+}
+.page-template .block-content .post2:hover .cnv-img-2x3 img {
+  transform: scale(1.1);
+}
+.page-template .block-content .post2 .img {
+  background: #000;
+}
+.page-template .block-content .post2 .img img {
+  width: 100%;
+}
+.page-template .block-content .post2 .ct {
+  margin-left: 40px;
+  padding-top: 1px;
+}
+@media (max-width: 992px) {
+  .page-template .block-content .post2 .ct {
+    margin-left: 0;
+  }
+}
+.page-template .block-content .post2 .ct .title {
+  text-transform: uppercase;
+  font-size: 16px;
+  color: #555555;
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+.page-template .block-content .post2 .ct .title a {
+  color: #000;
+  text-decoration: none;
+  font-weight: 700;
+}
+.page-template .block-content .post2 .ct .title a:hover {
+  color: #2A5BAA;
+}
+.page-template .block-content .post2 .ct .title:after {
+  content: "";
+  display: block;
+  background: #2A5BAA;
+  height: 1px;
+  width: 47px;
+  margin-top: 7px;
+}
+.page-template .block-content .post2 .ct .des {
+  color: #666;
+  font-size: 16px;
+  line-height: 20px;
+  max-height: 40px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+.page-template .block-content .post2 .ct .des a {
+  display: none;
+}
+.page-template .block-content .post2 .ct a.more {
+  color: #666;
+  font-size: 16px;
+  line-height: 20px;
+  max-height: 40px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+.page-template .block-content .clearfix:before {
+  content: "";
+  display: block;
+  clear: both;
+}
+.page-template .block-content .clearfix:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.search .pcate-title {
+  font-size: 18px;
+  font-weight: bold;
+  border-bottom: solid 1px #c0c0c0;
+  margin-bottom: 31px;
+  margin-top: 2px;
+}
+.search .pcate-title span {
+  display: inline-block;
+  vertical-align: middle;
+  margin-bottom: -2px;
+  border-bottom: solid 3px #2A5BAA;
+  padding-bottom: 8px;
+}
+.search .scope {
+  background: #fff;
+  padding: 15px 15px 33px 15px;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+.search .scope:hover {
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.15);
+}
+.search .scope:hover .img {
+  background: #000;
+}
+.search .scope:hover .img:before {
+  opacity: 1;
+}
+.search .scope:hover .img:after {
+  opacity: 1;
+}
+.search .scope:hover .title a {
+  color: #ec2027;
+  text-decoration: none;
+}
+.search .scope .img {
+  background: transparent;
+}
+.search .scope .img:before {
+  height: 1px;
+  width: 50px;
+  margin-left: -25px;
+}
+.search .scope .img:after {
+  height: 60px;
+  width: 1px;
+  margin-top: -30px;
+}
+.search .scope .img:before, .search .scope .img:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background: #fff;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  opacity: 0;
+}
+.search .scope .img img {
+  display: block;
+  width: 100%;
+}
+.search .scope p {
+  font-size: 16px;
+  margin-bottom: 10px;
+  padding-left: 10px;
+}
+.search .scope .title {
+  font-size: 18px;
+  line-height: 23px;
+  font-weight: 600;
+  padding-left: 10px;
+}
+.search .scope .title a {
+  color: #000;
 }
 
 body {

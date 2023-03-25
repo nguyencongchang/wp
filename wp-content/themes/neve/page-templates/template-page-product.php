@@ -35,7 +35,7 @@ get_header();
             <?php
             do_action( 'neve_page_header', $context );
             ?>
-            <div class="row">
+            <div class="row block-content">
             <?php
             $args = array(
                 'post_type' => 'custom_post_type_2',

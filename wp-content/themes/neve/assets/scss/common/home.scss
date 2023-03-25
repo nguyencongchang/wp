@@ -83,6 +83,24 @@
 
 .banner {
   min-height: 708px;
+
+  h2 {
+    font-size: 55px;
+    color: #fff;
+
+    @media (max-width: 992px) {
+      font-size: 30px;
+    }
+  }
+
+  span {
+    font-size: 30px;
+    color: #fff;
+
+    @media (max-width: 992px) {
+      font-size: 16px;
+    }
+  }
 }
 
 .header .nv-nav-wrap .nav-menu-primary {
@@ -620,6 +638,38 @@
     .mile-cas {
       button.slick-arrow {
         display: none;
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        top: 34px;
+        height: 3px;
+        background: #2a5baa;
+        left: 6px;
+        right: 6px;
+        z-index: -1;
+      }
+
+      .slick-list {
+        &:before {
+          left: 5px;
+          background: linear-gradient(to right, #fff, #2a5baa);
+        }
+
+        &:after {
+          right: 5px;
+          background: linear-gradient(to right, #2a5baa, #fff);
+        }
+
+        &:before, &:after {
+          content: '';
+          height: 3px;
+          top: 34px;
+          position: absolute;
+          width: 80px;
+          pointer-events: none;
+        }
       }
 
       .item {

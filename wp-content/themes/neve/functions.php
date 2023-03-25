@@ -167,7 +167,8 @@ function create_custom_post_types() {
             'rewrite'     => array( 'slug' => 'du-an' ),
             'hierarchical'        => false,
             'menu_position'       => null,
-            'supports'            => array( 'title', 'editor', 'thumbnail' )
+            'supports'            => array( 'title', 'editor', 'thumbnail' ),
+            'taxonomies'          => array( 'category' ),
         )
     );
 
@@ -183,7 +184,8 @@ function create_custom_post_types() {
             'rewrite'     => array( 'slug' => 'san-pham' ),
             'hierarchical'        => false,
             'menu_position'       => null,
-            'supports'            => array( 'title', 'editor', 'thumbnail' )
+            'supports'            => array( 'title', 'editor', 'thumbnail' ),
+            'taxonomies'          => array( 'category' ),
         )
     );
 
@@ -200,8 +202,8 @@ function create_custom_post_types() {
             'capability_type'     => 'post',
             'hierarchical'        => false,
             'menu_position'       => null,
-            'supports'            => array( 'title', 'editor', 'thumbnail' )
-
+            'supports'            => array( 'title', 'editor', 'thumbnail' ),
+            'taxonomies'          => array( 'category' ),
         )
     );
 
