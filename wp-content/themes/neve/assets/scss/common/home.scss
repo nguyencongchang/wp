@@ -291,6 +291,9 @@
     background-size: cover;
 
     .st-col {
+      @media (max-width: 767px) {
+        padding: 0 5px !important;
+      }
       &:after {
         content: '';
         width: 1px;
@@ -300,6 +303,10 @@
         background: rgba(255, 255, 255, 0.2);
         position: absolute;
         right: 15px;
+        
+        @media (max-width: 991px) {
+          display: none;
+        }
       }
 
       .statis {
@@ -317,7 +324,21 @@
           display: inline-block;
           vertical-align: middle;
           font-size: 44px;
-          font-weight: 500;
+          font-weight: 700;
+
+          @media (max-width: 767px) {
+            font-size: 32px;
+          }
+        }
+
+        p {
+          font-size: 18px;
+          font-weight: 700;
+          margin-top: 7px;
+
+          @media (max-width: 767px) {
+            font-size: 14px;
+          }
         }
       }
     }
@@ -596,6 +617,11 @@
               padding-left: 10px;
               color: #000;
               font-weight: 700;
+
+              @media (max-width: 767px) {
+                font-size: 16px;
+                line-height: 24px;
+              }
             }
           }
         }
@@ -781,6 +807,10 @@
         transition: all .2s ease-in-out;
         margin: 10px 15px;
 
+        @media (max-width: 767px) {
+          padding: 10px 10px 20px 10px;
+        }
+
         &:hover {
           box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.15);
 
@@ -853,7 +883,11 @@
           font-size: 16px;
           margin-bottom: 10px;
           padding-left: 10px;
-        }
+
+          @media (max-width: 767px) {
+              font-size: 14px;
+            }
+          }
 
         .title {
           a {
@@ -863,6 +897,11 @@
             padding-left: 10px;
             color: #000;
             font-weight: 700;
+
+            @media (max-width: 767px) {
+              font-size: 16px;
+              line-height: 24px;
+            }
           }
         }
       }

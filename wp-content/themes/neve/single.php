@@ -7,6 +7,7 @@
  */
 
 $container_class = apply_filters('neve_container_class_filter', 'container', 'single-post');
+$context = class_exists( 'WooCommerce', false ) && ( is_cart() || is_checkout() || is_account_page() ) ? 'woo-page' : 'single-page';
 
 get_header();
 
@@ -49,7 +50,7 @@ get_header();
             </ul>
         </div>
         <div class="row">
-            <div class="single container">
+            <div class="single container col-12 col-lg-8">
                 <h1 class="s-title"><?= $title ?></h1>
                 <time><i class="fa fa-calendar"></i><?= get_the_date('F d, Y') ?></time>
                 <div class="s-content fv-content">
@@ -130,7 +131,9 @@ get_header();
                     </div>
                 <?php endif; ?>
             </div>
-            <?php do_action('neve_do_sidebar', 'single-post', 'right'); ?>
+            <div class="col-12 col-lg-4 side-bar">
+                <?php do_action( 'neve_do_sidebar', $context, 'right' ); ?>
+            </div>
         </div>
     </div>
     <div class="back-to-top"><i class="fa-solid fa-arrow-up"></i></div>

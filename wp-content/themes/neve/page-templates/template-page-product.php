@@ -31,7 +31,7 @@ get_header();
     </div>
     <div class="container">
     <div class="row">
-        <div class="nv-single-page-wrap col">
+        <div class="nv-single-page-wrap col-12 col-lg-8">
             <?php
             do_action( 'neve_page_header', $context );
             ?>
@@ -66,7 +66,9 @@ get_header();
             <?php wp_reset_postdata();  ?>
             </div>
         </div>
+        <div class="col-12 col-lg-4 side-bar">
         <?php do_action( 'neve_do_sidebar', $context, 'right' ); ?>
+        </div>
     </div>
     </div>
 </div>

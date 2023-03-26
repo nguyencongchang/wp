@@ -263,6 +263,11 @@
   background-position: center;
   background-size: cover;
 }
+@media (max-width: 767px) {
+  .page-home .section-statistic .st-col {
+    padding: 0 5px !important;
+  }
+}
 .page-home .section-statistic .st-col:after {
   content: "";
   width: 1px;
@@ -272,6 +277,11 @@
   background: rgba(255, 255, 255, 0.2);
   position: absolute;
   right: 15px;
+}
+@media (max-width: 991px) {
+  .page-home .section-statistic .st-col:after {
+    display: none;
+  }
 }
 .page-home .section-statistic .st-col .statis {
   color: #fff;
@@ -287,7 +297,22 @@
   display: inline-block;
   vertical-align: middle;
   font-size: 44px;
-  font-weight: 500;
+  font-weight: 700;
+}
+@media (max-width: 767px) {
+  .page-home .section-statistic .st-col .statis .num {
+    font-size: 32px;
+  }
+}
+.page-home .section-statistic .st-col .statis p {
+  font-size: 18px;
+  font-weight: 700;
+  margin-top: 7px;
+}
+@media (max-width: 767px) {
+  .page-home .section-statistic .st-col .statis p {
+    font-size: 14px;
+  }
 }
 .page-home .section-project {
   padding-bottom: 50px;
@@ -520,6 +545,12 @@
   color: #000;
   font-weight: 700;
 }
+@media (max-width: 767px) {
+  .page-home .section-scope .slick-slide-product .slick-slide .scope .title a {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
 .page-home .section-scope .slick-slide-product .slick-dots {
   margin-top: 34px;
   text-align: center;
@@ -668,6 +699,11 @@
   transition: all 0.2s ease-in-out;
   margin: 10px 15px;
 }
+@media (max-width: 767px) {
+  .page-home .section-article .article-cas .article {
+    padding: 10px 10px 20px 10px;
+  }
+}
 .page-home .section-article .article-cas .article:hover {
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.15);
 }
@@ -728,6 +764,11 @@
   margin-bottom: 10px;
   padding-left: 10px;
 }
+@media (max-width: 767px) {
+  .page-home .section-article .article-cas .article p {
+    font-size: 14px;
+  }
+}
 .page-home .section-article .article-cas .article .title a {
   text-decoration: none;
   font-size: 20px;
@@ -735,6 +776,12 @@
   padding-left: 10px;
   color: #000;
   font-weight: 700;
+}
+@media (max-width: 767px) {
+  .page-home .section-article .article-cas .article .title a {
+    font-size: 16px;
+    line-height: 24px;
+  }
 }
 .page-home .section-article .article-cas .slick-dots {
   margin-top: 34px;
@@ -874,6 +921,7 @@
   .header-container-logo .header-logo {
     margin-right: 0;
   }
+
   .header-container-logo img {
     max-height: 40px;
   }
@@ -895,15 +943,19 @@
   .container {
     max-width: 100%;
   }
+
   .header-container-info {
     display: none;
   }
+
   .hide-on-tablet {
     display: none;
   }
+
   .hide-on-desktop {
     display: block;
   }
+
   .icon-menu-bar-tablet {
     display: block;
     display: flex;
@@ -911,15 +963,19 @@
     margin-left: 10px;
     cursor: pointer;
   }
+
   .wrapper .header .container {
     display: none;
   }
+
   .header-menu-sidebar-bg {
     background-color: #434343;
   }
+
   .header .nv-nav-wrap .nav-menu-primary .sub-menu {
     background-color: #4b4b4b;
   }
+
   .header-container-logo .gt_float_switcher img {
     width: 20px;
   }
@@ -932,9 +988,11 @@
   .header-container-logo .gt-current-lang span {
     font-size: 16px;
   }
+
   .header-menu-sidebar-inner .builder-item .nav-menu-primary li {
     border-bottom: 1px solid #949494;
   }
+
   .info-mobile {
     display: block !important;
     padding-left: 18px;
@@ -943,6 +1001,7 @@
   .info-mobile span {
     padding-left: 10px;
   }
+
   .builder-item .item--inner .nv-nav-wrap .wrap a {
     color: #fff !important;
   }
@@ -1014,14 +1073,18 @@
   font-weight: normal;
   font-style: normal;
 }
-#secondary h2 {
+.side-bar .nv-sidebar-wrap {
+  max-width: initial !important;
+  padding-left: 30px !important;
+}
+.side-bar .nv-sidebar-wrap #secondary h2 {
   font-weight: bold;
   font-size: 22px;
   text-transform: uppercase;
   color: #555555;
   margin-bottom: 20px;
 }
-#secondary h2:after {
+.side-bar .nv-sidebar-wrap #secondary h2:after {
   content: "";
   display: block;
   height: 1px;
@@ -1029,7 +1092,7 @@
   margin-top: 10px;
   background: #2A5BAA;
 }
-#secondary #block-8:before, #secondary #block-10:before {
+.side-bar .nv-sidebar-wrap #secondary #block-8:before, .side-bar .nv-sidebar-wrap #secondary #block-10:before {
   content: "";
   position: absolute;
   left: -1px;
@@ -1037,7 +1100,7 @@
   background: #2A5BAA;
   height: 50px;
 }
-#secondary a {
+.side-bar .nv-sidebar-wrap #secondary a {
   font-size: 16px;
   color: #555555;
   display: block;
@@ -1046,7 +1109,7 @@
   margin-bottom: 10px;
   font-weight: 700;
 }
-#secondary a:hover {
+.side-bar .nv-sidebar-wrap #secondary a:hover {
   text-decoration: none;
   color: #2A5BAA;
 }
@@ -1107,12 +1170,18 @@
 .page-template .block-content .scope:hover .img:after {
   opacity: 1;
 }
+.page-template .block-content .scope:hover .img img {
+  opacity: 0.5;
+}
 .page-template .block-content .scope:hover .title a {
   color: #ec2027;
   text-decoration: none;
 }
 .page-template .block-content .scope .img {
-  background: transparent;
+  background: #000;
+  position: relative;
+  display: block;
+  height: 185px;
 }
 .page-template .block-content .scope .img:before {
   height: 1px;
@@ -1138,17 +1207,26 @@
 .page-template .block-content .scope .img img {
   display: block;
   width: 100%;
+  height: 185px;
+  object-fit: cover;
 }
 .page-template .block-content .scope p {
   font-size: 16px;
   margin-bottom: 10px;
   padding-left: 10px;
+  margin-top: 15px;
 }
 .page-template .block-content .scope .title {
   font-size: 18px;
   line-height: 23px;
   font-weight: 600;
   padding-left: 10px;
+}
+@media (max-width: 767px) {
+  .page-template .block-content .scope .title {
+    font-size: 16px;
+    line-height: 24px;
+  }
 }
 .page-template .block-content .scope .title a {
   color: #000;
@@ -1167,9 +1245,13 @@
 }
 .page-template .block-content .post2 .img {
   background: #000;
+  min-width: 270px;
+  height: 350px;
 }
 .page-template .block-content .post2 .img img {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .page-template .block-content .post2 .ct {
   margin-left: 40px;
