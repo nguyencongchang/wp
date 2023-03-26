@@ -303,7 +303,7 @@
         background: rgba(255, 255, 255, 0.2);
         position: absolute;
         right: 15px;
-        
+
         @media (max-width: 991px) {
           display: none;
         }
@@ -362,6 +362,7 @@
     }
 
     .project {
+      height: 450px;
       position: relative;
       margin-bottom: 30px;
       cursor: pointer;
@@ -369,6 +370,7 @@
       a.img {
         display: flex !important;
         justify-content: center;
+        height: 100%;
 
         img {
           display: block;

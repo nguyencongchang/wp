@@ -330,6 +330,7 @@
   margin-bottom: 38px;
 }
 .page-home .section-project .project {
+  height: 450px;
   position: relative;
   margin-bottom: 30px;
   cursor: pointer;
@@ -337,6 +338,7 @@
 .page-home .section-project .project a.img {
   display: flex !important;
   justify-content: center;
+  height: 100%;
 }
 .page-home .section-project .project a.img img {
   display: block;
