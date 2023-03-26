@@ -937,8 +937,14 @@
   }
   .info-mobile {
     display: block !important;
-    padding-left: 20px;
+    padding-left: 18px;
     color: #a8a8a8;
+  }
+  .info-mobile span {
+    padding-left: 10px;
+  }
+  .builder-item .item--inner .nv-nav-wrap .wrap a {
+    color: #fff !important;
   }
 }
 .info-mobile {

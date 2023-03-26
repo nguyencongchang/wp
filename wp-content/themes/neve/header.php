@@ -45,11 +45,15 @@ do_action( 'neve_html_start_before' );
         <div class="info-mobile">
             <div class="menu-item menu-item-type-post_type menu-item-object-page menu-item-32">
                 <i class="fa fa-mobile"></i>
-                <?php echo $headerPhone;?>
+                <span>
+                    <?php echo $headerPhone;?>
+                </span>
             </div>
             <div class="menu-item menu-item-type-post_type menu-item-object-page menu-item-32">
                 <i class="fa fa-envelope"></i>
-                <?php echo $headerEmail;?>
+                <span>
+                    <?php echo $headerEmail;?>
+                </span>
             </div>
         </div>
     </div>

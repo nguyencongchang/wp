@@ -176,8 +176,7 @@ jQuery(document).ready(function($) {
 
     const infoMobile = $('.info-mobile');
 
-    $('.header-menu-sidebar-bg').append(infoMobile);
-    infoMobile.before($('.header-menu-sidebar-bg .close-sidebar-panel'));
-    infoMobile.after($('.header-menu-sidebar-bg .header-menu-sidebar-inner'));
+    $('.header-menu-sidebar-inner').append(infoMobile);
+    infoMobile.after($('.header-menu-sidebar-inner .builder-item'));
 
 });
