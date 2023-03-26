@@ -179,4 +179,16 @@ jQuery(document).ready(function($) {
     $('.header-menu-sidebar-inner').append(infoMobile);
     infoMobile.after($('.header-menu-sidebar-inner .builder-item'));
 
+    $(window).scroll(function() {
+        let stickyHeaderOffer = $('#header-grid');
+
+        if ($(window).scrollTop() >= stickyHeaderOffer.offset().top) {
+            stickyHeaderOffer.addClass('sticky-active');
+        }
+
+        if ($(window).scrollTop() < 134 && stickyHeaderOffer.hasClass('sticky-active')) {
+            stickyHeaderOffer.removeClass('sticky-active');
+        }
+    });
+
 });
