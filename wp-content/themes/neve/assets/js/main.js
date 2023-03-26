@@ -165,7 +165,6 @@ jQuery(document).ready(function($) {
         ]
     });
 
-    $('.back-to-top').css('display', 'block');
 
     const buttonMenuMobile = $('.menu-mobile-toggle .navbar-toggle')
 
@@ -189,6 +188,33 @@ jQuery(document).ready(function($) {
         if ($(window).scrollTop() < 134 && stickyHeaderOffer.hasClass('sticky-active')) {
             stickyHeaderOffer.removeClass('sticky-active');
         }
+    });
+
+    const btnBackToTop = $('.back-to-top');
+    btnBackToTop.css('display', 'block');
+
+
+    btnBackToTop.addClass('d-none');
+
+    $(window).scroll(function() {
+        const scrollTop = $(this).scrollTop();
+        const elementOffset = $('.single-page-container').offset().top;
+
+        if (scrollTop > elementOffset) {
+            btnBackToTop.removeClass('d-none');
+        } else {
+            btnBackToTop.addClass('d-none');
+            // the user has not scrolled past the element
+            // do something else here
+        }
+    });
+
+
+
+    btnBackToTop.click(function() {
+        $('html, body').animate({scrollTop: 0}, 'slow');
+        btnBackToTop.addClass('d-none');
+        return false;
     });
 
 });

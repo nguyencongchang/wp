@@ -61,7 +61,7 @@ get_header();
             width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"></iframe>
 </div>
-<div class="back-to-top"><i class="fa-solid fa-arrow-up"></i></div>
+<div class="back-to-top d-none"><i class="fa-solid fa-arrow-up"></i></div>
 
 <?php
 get_footer();
