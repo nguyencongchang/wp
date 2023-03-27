@@ -28,10 +28,10 @@ get_header();
         </ul>
     </div>
     <div class="section-contact row">
-        <div class="col-8">
+        <div class="col-12 col-lg-8">
             <?php echo do_shortcode("[contact-form-7 id='101' title='Contact']")?>
         </div>
-        <div class="col-4 mb-lg-5">
+        <div class="col-12 col-lg-4 mb-lg-5">
             <div class="block-address fv-content">
                 <p><strong> <?= get_field('title', 'options'); ?></strong></p>
                 <?php if (have_rows('information', 'options')) : ?>
@@ -61,7 +61,7 @@ get_header();
             width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"></iframe>
 </div>
-<div class="back-to-top d-none"><i class="fa-solid fa-arrow-up"></i></div>
+<div class="back-to-top"><i class="fa-solid fa-arrow-up"></i></div>
 
 <?php
 get_footer();

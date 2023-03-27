@@ -62,7 +62,7 @@ do_action( 'neve_html_start_before' );
 <div class="header-container-logo">
 <div class="container">
     <div class="row align-items-center justify-content-between col-12">
-        <div class="col-md-8 col-5">
+        <div class="col-md-8 col-5 pl-lg-0">
                 <?php
                 $headerLogo = get_field('header-logo', 'options');
                 ?>

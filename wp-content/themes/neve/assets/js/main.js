@@ -191,21 +191,23 @@ jQuery(document).ready(function($) {
     });
 
     const btnBackToTop = $('.back-to-top');
-    btnBackToTop.css('display', 'block');
-
-
-    btnBackToTop.addClass('d-none');
 
     $(window).scroll(function() {
         const scrollTop = $(this).scrollTop();
-        const elementOffset = $('.single-page-container').offset().top;
+        let elementOffset = "";
+        if (!$('.single-page-container').length) {
+             elementOffset = $('.single-post-container').offset().top;
+        } else {
+             elementOffset = $('.single-page-container').offset().top;
+        }
 
+        console.log(scrollTop, elementOffset);
         if (scrollTop > elementOffset) {
+            btnBackToTop.addClass('d-block');
             btnBackToTop.removeClass('d-none');
         } else {
             btnBackToTop.addClass('d-none');
-            // the user has not scrolled past the element
-            // do something else here
+            btnBackToTop.removeClass('d-block');
         }
     });
 

@@ -45,11 +45,11 @@ get_header();
                 $title = get_the_title();
                 ?>
                 <li><a href="/">Trang chủ</a></li>
-                <li><a href="<?= $postTypeLink ?>"><?= $postTypeLabel ?></a></li>
-                <li><a href="<?= $permalink ?>"></a><?= $title ?></li>
+                <li class="post-type"><a href="<?= $postTypeLink ?>"><?= $postTypeLabel ?></a></li>
+                <li><a href="<?= $permalink ?>"><?= $title ?></a></li>
             </ul>
         </div>
-        <div class="row">
+        <div class="d-flex">
             <div class="single container col-12 col-lg-8">
                 <h1 class="s-title"><?= $title ?></h1>
                 <time><i class="fa fa-calendar"></i><?= get_the_date('F d, Y') ?></time>

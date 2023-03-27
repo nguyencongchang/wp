@@ -60,7 +60,12 @@ $context = class_exists( 'WooCommerce', false ) && ( is_cart() || is_checkout() 
 			do_action( 'neve_after_content', $context );
 			?>
 		</div>
-		<?php do_action( 'neve_do_sidebar', $context, 'right' ); ?>
-	</div>
+        <div class="col-12 col-lg-4 side-bar">
+            <?php do_action( 'neve_do_sidebar', $context, 'right' ); ?>
+        </div>
+    </div>
 </div>
+
+<div class="back-to-top"><i class="fa-solid fa-arrow-up"></i></div>
+
 <?php get_footer(); ?>
