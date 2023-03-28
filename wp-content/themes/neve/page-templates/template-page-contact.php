@@ -43,6 +43,7 @@ get_header();
                         $fax = get_sub_field('fax');
                         $email = get_sub_field('email');
                         ?>
+                    
                         <p>
                             <strong><?= $office ?><span>:</span></strong><?= $address ?><br>
                             <strong><?= $phone ?></strong><br>

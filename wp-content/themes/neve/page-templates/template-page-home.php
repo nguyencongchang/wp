@@ -86,7 +86,7 @@ get_header();
                                         $desc   = get_sub_field('description');
                                         $image  = get_sub_field('image');
                                         ?>
-                                        <div class="col-lg-3 col-6 st-col">
+                                        <div class="col-lg-3 col-6 st-col d-flex justify-content-center">
                                             <div class="statis">
                                                 <div class="icon"><img src="<?=$image['url'] ?>" alt="icon" /></div>
                                                 <div class="num"><span class="static-counter-<?= $i ?>" data-counter="<?= $number ?>"></span><span>+</span></div>

@@ -315,6 +315,10 @@
       @media (max-width: 767px) {
         padding: 0 5px !important;
       }
+      &:last-of-type:after {
+        display: none !important;
+      }
+
       &:after {
         content: '';
         width: 1px;
