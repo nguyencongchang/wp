@@ -20,14 +20,12 @@ $context = class_exists( 'WooCommerce', false ) && ( is_cart() || is_checkout() 
 
 get_header();
 ?>
-<div class="single-page-container page-template">
+<div class="single-page-container page-template container">
     <div class="breadcrumbs">
-        <div class="container">
-            <ul>
-                <li><a href="/">Trang chủ</a></li>
-                <li><a href="/page/project">Dự Án</a></li>
-            </ul>
-        </div>
+        <ul>
+            <li><a href="/">Trang chủ</a></li>
+            <li><a href="/page/project">Dự Án</a></li>
+        </ul>
     </div>
     <div class="container">
     <div class="row">

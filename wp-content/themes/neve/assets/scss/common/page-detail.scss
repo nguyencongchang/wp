@@ -50,6 +50,21 @@
       margin: 0 auto;
     }
 
+    .s-social {
+      margin-top: 29px;
+
+      .ctrl {
+        display: inline-block;
+        vertical-align: middle;
+
+        li {
+          i {
+            color: #555555;
+          }
+        }
+      }
+    }
+
     .bor-box {
       border-left: solid 1px #e2e2e2;
       position: relative;
