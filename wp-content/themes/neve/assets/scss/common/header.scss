@@ -225,7 +225,7 @@
   overflow: hidden;
   right: 1px;
   z-index: 1;
-  margin-top: 8px;
+  margin-top: 37px;
   display: block;
   width: 42px;
   left: -5px;
@@ -246,11 +246,11 @@
   border-radius: 50%;
   text-transform: uppercase;
   color: #6d8199;
-  min-width: 103px;
+  min-width: 60px;
   text-align: left;
 }
 
-.language ul a {
+.language ul li {
   display: block;
   padding: 5px 5px;
   border-bottom: solid 1px #f1f1f1;
@@ -261,7 +261,7 @@
   text-decoration: none;
   color: inherit;
 
-  a:hover {
+  &:hover {
     background: #6d8199;
   }
 }
@@ -276,9 +276,23 @@
   object-fit: cover;
 }
 
+.language ul {
+  li:hover {
+    background-color: #ccc;
+  }
+}
+
 .language-none {
   width: 0;
   height: 0;
   opacity: 0;
   z-index: -9999;
+}
+
+.language-color {
+  color: #6b6bd5;
+}
+
+.language-arrow-down {
+  font-size: 10px;
 }

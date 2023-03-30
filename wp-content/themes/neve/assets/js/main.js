@@ -239,17 +239,35 @@ jQuery(document).ready(function($) {
     const vi              = gtOption.attr('data-gt-lang') === "vi";
     const en              = gtOption.attr('data-gt-lang') === "en";
 
-    languageVi.on('click', function (event) {
-        $(this).parent().addClass('d-none');
-        event.preventDefault();
+    const languageSelectedVi = $('.language-selected-vi');
+    const languageSelectedEn = $('.language-selected-en');
+
+    // document.querySelector('a[data-gt-lang="vi"]').click();
+
+    languageVi.on('click', function () {
         document.querySelector('a[data-gt-lang="vi"]').click();
+        $(this).parent().addClass('d-none');
+        languageSelectedEn.addClass('d-none');
+        languageSelectedVi.removeClass('d-none');
+        languageSelectedVi.addClass('d-block');
+        languageSelectedEn.removeClass('d-block');
         $('.text-language').text('Vi');
     })
 
     languageEn.on('click', function (event) {
-        $(this).parent().addClass('d-none');
-        event.preventDefault();
         document.querySelector('a[data-gt-lang="en"]').click();
+        $(this).parent().addClass('d-none');
+        languageSelectedVi.addClass('d-none');
+        languageSelectedEn.removeClass('d-none');
+        languageSelectedEn.addClass('d-block');
+        languageSelectedVi.removeClass('d-block');
+        event.preventDefault();
         $('.text-language').text('En');
     })
+
+    if (!languageSelectedVi.hasClass('d-none')) {
+        $('.text-language').text('Vi');
+    } else {
+        $('.text-language').text('En');
+    }
 });
