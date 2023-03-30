@@ -85,8 +85,19 @@ do_action( 'neve_html_start_before' );
                 echo get_search_form();
             ?>
             </div>
-            <div>
+
+            <div class="language drop">
+                <div class="label"><img src="<?= get_stylesheet_directory_uri()?>/assets/img/header/Vn-Flag.png" alt=""> <span class="text-language">Vi</span></div>
+                <ul class="d-none">
+                    <li class="language-vi"><a href="#" title=""><img src="<?= get_stylesheet_directory_uri()?>/assets/img/header/Vn-Flag.png" alt=""> Vie</a></li>
+                    <li class="language-en"><a href="#" title=""><img src="<?= get_stylesheet_directory_uri()?>/assets/img/header/En-Flag.png" alt=""> Eng</a></li>
+                </ul>
+            </div>
+
+
+            <div class="language-none">
                 <?php
+
                 echo do_shortcode("[gtranslate]");
                 ?>
             </div>

@@ -212,3 +212,73 @@
   z-index: 99999;
   right: 0;
 }
+
+.language {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+}
+
+.language ul {
+  position: absolute;
+  background: #fff;
+  overflow: hidden;
+  right: 1px;
+  z-index: 1;
+  margin-top: 8px;
+  display: block;
+  width: 42px;
+  left: -5px;
+  border-radius: 40px;
+  font-size: 0;
+  color: transparent;
+  -webkit-box-shadow: 0 0 15px 0 rgb(236 32 39 / 30%);
+  box-shadow: 0 0 15px 0 rgb(236 32 39 / 30%);
+}
+
+.language .label:after {
+  margin-left: 8px;
+}
+
+.language .label {
+  display: block;
+  cursor: pointer;
+  border-radius: 50%;
+  text-transform: uppercase;
+  color: #6d8199;
+  min-width: 103px;
+  text-align: left;
+}
+
+.language ul a {
+  display: block;
+  padding: 5px 5px;
+  border-bottom: solid 1px #f1f1f1;
+  -webkit-transition: all .2s ease-in-out;
+  -o-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+  outline: none;
+  text-decoration: none;
+  color: inherit;
+
+  a:hover {
+    background: #6d8199;
+  }
+}
+
+.language img {
+  display: inline-block;
+  vertical-align: middle;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+.language-none {
+  width: 0;
+  height: 0;
+  opacity: 0;
+  z-index: -9999;
+}

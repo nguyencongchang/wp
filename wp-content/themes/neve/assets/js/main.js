@@ -219,4 +219,51 @@ jQuery(document).ready(function($) {
         return false;
     });
 
+    // $('.language').on('click', function() {
+    //     $('.language ul').removeClass('d-none');
+    // })
+    const language = $('.language');
+    const languageBlock = $('.language ul');
+    const languageVi = $('.language-vi');
+    const languageEn = $('.language-en');
+
+    console.log(language);
+
+    language.on('click', function () {
+        languageBlock.removeClass('d-none');
+    });
+
+
+
+
+    $(document).on('click', function(event) {
+        if (!languageBlock.is(event.target) && languageBlock.has(event.target).length === 0 && !language.is(event.target) && language.has(event.target).length === 0 ){
+            languageBlock.addClass('d-none');
+        }
+    });
+
+    const languageCurrent = $('.gt_options .gt-current')
+
+    const vi = $('.gt_options .nturl').attr('data-gt-lang') === "vi";
+    const en = $('.gt_options .nturl').attr('data-gt-lang') === "en";
+
+
+
+    languageVi.on('click', function (event) {
+
+        event.preventDefault();
+        document.querySelector('a[data-gt-lang="vi"]').click();
+        $('.text-language').text('Vi');
+
+    })
+
+    languageEn.on('click', function (event) {
+
+        event.preventDefault();
+        document.querySelector('a[data-gt-lang="en"]').click();
+        $('.text-language').text('En');
+
+    })
+
+
 });

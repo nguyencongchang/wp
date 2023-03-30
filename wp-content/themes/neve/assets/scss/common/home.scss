@@ -43,7 +43,10 @@
     .header-logo {
       display: inline-block;
       vertical-align: middle;
-      margin-right: 75px;
+
+      @media (min-width: 992px) {
+        margin-right: 75px;
+      }
     }
   }
 }
@@ -685,6 +688,11 @@
   }
 
   .section-milestone {
+    padding: 40px 0;
+
+    @media (max-width: 767px) {
+      padding: 20px 0;
+    }
     .head {
       margin-bottom: 80px;
     }
@@ -796,12 +804,14 @@
 
   .section-article {
     background-color: #f8f9fb;
-    padding-top: 5px;
-    padding-bottom: 50px;
+    padding: 35px 0;
     background-image: url("../img/home/bg-dot1.png");
     background-position: left 115px bottom 15px;
     background-repeat: no-repeat;
 
+    @media (max-width: 767px) {
+      padding: 20px 0;
+    }
     .article-cas {
       .slick-arrow.slick-prev {
         left: -110px;
