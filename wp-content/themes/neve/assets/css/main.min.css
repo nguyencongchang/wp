@@ -131,7 +131,11 @@
   background: #2a5baa;
 }
 .header .nv-nav-wrap .nav-menu-primary .sub-menu li {
+  border-bottom: 1px solid #ababab;
   min-width: 100px;
+}
+.header .nv-nav-wrap .nav-menu-primary .sub-menu li:last-child {
+  border-bottom: unset;
 }
 .header .nv-nav-wrap .nav-menu-primary .sub-menu li .wrap {
   padding: 6px 10px;

@@ -143,6 +143,13 @@
 
   .sub-menu {
     li {
+      border-bottom: 1px solid #ababab;
+
+      &:last-child {
+        border-bottom: unset;
+      }
+
+
       .wrap {
         padding: 6px 10px;
       }
