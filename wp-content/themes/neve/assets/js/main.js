@@ -201,7 +201,6 @@ jQuery(document).ready(function($) {
              elementOffset = $('.single-page-container').offset().top;
         }
 
-        console.log(scrollTop, elementOffset);
         if (scrollTop > elementOffset) {
             btnBackToTop.addClass('d-block');
             btnBackToTop.removeClass('d-none');
@@ -270,4 +269,44 @@ jQuery(document).ready(function($) {
     } else {
         $('.text-language').text('En');
     }
+
+    $('.pro-img').slick({
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        dots: false,
+        autoplay: true,
+    });
+
+    $('.pro-thumb').slick({
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        dots: false,
+        autoplay: true,
+        prevArrow: '<i class="fa fa-angle-left smooth prev slick-arrow" aria-hidden="true"></i>',
+        nextArrow: '<i class="fa fa-angle-right smooth next slick-arrow" aria-hidden="true"></i>',
+    });
+
+    const prevSlideThumb = $('.pro-thumb').find('.prev');
+    const nextSlideThumb = $('.pro-thumb').find('.next');
+
+    prevSlideThumb.on('click', function () {
+        $('.pro-img').find('.slick-prev').trigger('click');
+    })
+
+    nextSlideThumb.on('click', function () {
+        $('.pro-img').find('.slick-next').trigger('click');
+    })
+
+    $('[data-fancybox]').fancybox({
+        buttons : [
+            'close'
+        ],
+        wheel : false,
+        transitionEffect: "slide",
+        loop            : true,
+        toolbar         : false,
+        clickContent    : false
+    });
 });

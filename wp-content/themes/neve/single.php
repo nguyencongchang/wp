@@ -56,7 +56,36 @@ get_header();
                 <div class="s-content fv-content">
                     <?= get_the_content() ?>
                 </div>
-                <div class="s-social">
+                    <?php if(have_rows('slide-image')): ?>
+                    <div class="pro-gallery">
+                            <div class="pro-img">
+                                <?php while (have_rows('slide-image')): ?>
+                                    <?php the_row();
+                                          $image = get_sub_field('image');
+                                    ?>
+                                    <div class="slick-slide">
+                                        <a class="img cnv-img-rectangle v2 fancybox" data-fancybox="gallery" tabindex="-1">
+                                            <img src="<?= $image['url']?>" alt="" title="">
+                                        </a>
+                                    </div>
+                                <?php endwhile;?>
+                            </div>
+                            <div class="pro-thumb">
+                                <?php while (have_rows('slide-image')): ?>
+                                    <?php the_row();
+                                    $image = get_sub_field('image');
+                                    ?>
+                                    <div class="slick-slide">
+                                        <div class="img cnv-img-rectangle v2">
+                                            <img src="<?= $image['url']?>" alt="" title="">
+                                        </div>
+                                    </div>
+                                <?php endwhile;?>
+                            </div>
+                        </div>
+                    <?php endif;?>
+
+                <div class="s-social d-flex">
                     <span class="text">Chia sẻ:</span>
                     <div class="ctrl">
                         <ul class="cnv-social-icons list-inline">
