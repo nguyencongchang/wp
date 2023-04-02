@@ -268,6 +268,11 @@ jQuery(document).ready(function($) {
         $('.text-language').text('En');
     })
 
+    document.querySelector('a[data-gt-lang="en"]').text('EN');
+    document.querySelector('a[data-gt-lang="en"]').text('VN');
+
+
+
     $('.header-language').on('click', function (event) {
         console.log('chang')
     })

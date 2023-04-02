@@ -22,14 +22,49 @@
 
 .icon-search-header {
   position: absolute;
-  right: 200px;
+  right: 180px;
   cursor: pointer;
   z-index: 100;
 
   @media (max-width: 992px) {
     right: 180px;
   }
+}
 
+.gt-selected {
+  .gt-current-lang {
+    img {
+      width: 24px;
+    }
+
+    span {
+      font-size: 15px;
+    }
+  }
+}
+
+.gt_options {
+  img {
+    width: 24px;
+  }
+
+  a {
+    font-size: 15px;
+  }
+}
+
+#gt_float_wrapper {
+  .gt_float_switcher {
+    max-width: 96px;
+  }
+}
+
+.gt-current-lang {
+  display: flex;
+
+  .gt_float_switcher-arrow {
+    margin-left: 2px;
+  }
 }
 
 .none-form-search-header {
