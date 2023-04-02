@@ -76,8 +76,8 @@ do_action( 'neve_html_start_before' );
         </div>
         <div>
         </div>
-        <div class="d-flex col-7 col-md-4 justify-content-end">
-            <div class="d-flex align-items-center mr-4 icon-search-header">
+        <div class="d-flex col-7 col-md-4 justify-content-end align-items-center container-search-language">
+            <div class="d-flex align-items-center icon-search-header">
                 <i class="fas fa-search"></i>
             </div>
             <div class="d-none" id="block-form">
@@ -86,23 +86,23 @@ do_action( 'neve_html_start_before' );
             ?>
             </div>
 
-            <div class="language drop d-flex">
-                <div class="label d-flex align-items-center">
-                    <img class="language-selected-vi" src="<?= get_stylesheet_directory_uri()?>/assets/img/header/Vn-Flag.png" alt="">
-                    <img class="language-selected-en d-none" src="<?= get_stylesheet_directory_uri()?>/assets/img/header/En-Flag.png" alt="">
-                    <span class="ml-2 text-language language-color"></span>
-                </div>
+<!--            <div class="language drop d-flex">-->
+<!--                <div class="label d-flex align-items-center">-->
+<!--                    <img class="language-selected-vi" src="--><?//= get_stylesheet_directory_uri()?><!--/assets/img/header/Vn-Flag.png" alt="">-->
+<!--                    <img class="language-selected-en d-none" src="--><?//= get_stylesheet_directory_uri()?><!--/assets/img/header/En-Flag.png" alt="">-->
+<!--                    <span class="ml-2 text-language language-color"></span>-->
+<!--                </div>-->
+<!---->
+<!--                <ul class="d-none">-->
+<!--                    <li class="language-vi"><img src="--><?//= get_stylesheet_directory_uri()?><!--/assets/img/header/Vn-Flag.png" alt=""> Vie-->
+<!--                    </li>-->
+<!--                    <li class="language-en"><img src="--><?//= get_stylesheet_directory_uri()?><!--/assets/img/header/En-Flag.png" alt=""> Eng</li>-->
+<!--                </ul>-->
+<!--                <i class="ml-2 language-color d-flex align-items-center fa-solid fa-chevron-down language-arrow-down"></i>-->
+<!--            </div>-->
 
-                <ul class="d-none">
-                    <li class="language-vi"><img src="<?= get_stylesheet_directory_uri()?>/assets/img/header/Vn-Flag.png" alt=""> Vie
-                    </li>
-                    <li class="language-en"><img src="<?= get_stylesheet_directory_uri()?>/assets/img/header/En-Flag.png" alt=""> Eng</li>
-                </ul>
-                <i class="ml-2 language-color d-flex align-items-center fa-solid fa-chevron-down language-arrow-down"></i>
-            </div>
 
-
-            <div class="language-none">
+            <div class="header-language">
                 <?php
 
                 echo do_shortcode("[gtranslate]");

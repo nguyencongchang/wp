@@ -243,7 +243,10 @@ jQuery(document).ready(function($) {
 
     // document.querySelector('a[data-gt-lang="vi"]').click();
 
+
+
     languageVi.on('click', function () {
+        // new google.translate.TranslateElement({pageLanguage: 'vi', includedLanguages: 'ar', autoDisplay: true}, 'google_translate_element');
         document.querySelector('a[data-gt-lang="vi"]').click();
         $(this).parent().addClass('d-none');
         languageSelectedEn.addClass('d-none');
@@ -254,6 +257,7 @@ jQuery(document).ready(function($) {
     })
 
     languageEn.on('click', function (event) {
+        // new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'ar', autoDisplay: true}, 'google_translate_element');
         document.querySelector('a[data-gt-lang="en"]').click();
         $(this).parent().addClass('d-none');
         languageSelectedVi.addClass('d-none');
@@ -263,6 +267,17 @@ jQuery(document).ready(function($) {
         event.preventDefault();
         $('.text-language').text('En');
     })
+
+    $('.header-language').on('click', function (event) {
+        console.log('chang')
+    })
+
+    // $('.header-language').on('click', function (event) {
+    //     console.log('css')
+    //     if ($('.gt-current-lang .gt-lang-code').text() === 'vi') {
+    //         console.log('chang');
+    //     }
+    // })
 
     if (!languageSelectedVi.hasClass('d-none')) {
         $('.text-language').text('Vi');
